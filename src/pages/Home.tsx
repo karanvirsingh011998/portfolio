@@ -61,7 +61,7 @@ export function Home() {
                 <Linkedin className="w-6 h-6" />
               </a>
               <a
-                href="mailto:karanvi011998r@gmail.com"
+                href="mailto:karanvi011998@gmail.com"
                 className="hover:text-blue-400 transition-colors"
               >
                 <Mail className="w-6 h-6" />
