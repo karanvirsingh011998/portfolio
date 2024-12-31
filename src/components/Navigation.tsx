@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 
@@ -6,9 +6,15 @@ export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+  
   const links = [
-    { href: '/portfolio', label: 'Home' },
+    { href: '/', label: 'Home' },
     { href: '/skills', label: 'Skills' },
+    { href: '/projects', label: 'Projects' },
+    { href: '/bio', label: 'Bio' },
     { href: '/contact', label: 'Contact' },
   ];
 
