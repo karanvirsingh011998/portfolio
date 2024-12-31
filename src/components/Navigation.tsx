@@ -7,7 +7,7 @@ export function Navigation() {
   const location = useLocation();
 
   const links = [
-    { href: '/', label: 'Home' },
+    { href: '/portfolio', label: 'Home' },
     { href: '/skills', label: 'Skills' },
     { href: '/contact', label: 'Contact' },
   ];
@@ -16,7 +16,7 @@ export function Navigation() {
     <nav className="fixed w-full z-50 bg-gray-900/90 backdrop-blur-sm">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          <Link to="/" className="text-xl font-bold text-white">
+          <Link to="/portfolio" className="text-xl font-bold text-white">
             KS
           </Link>
 
