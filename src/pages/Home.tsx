@@ -18,7 +18,7 @@ export function Home() {
     "Software Engineer",
     "React.js Developer",
     "Fullstack Developer",
-    "MERN Stack Developer"
+    "MERN Stack Developer",
   ];
 
   useEffect(() => {
@@ -38,7 +38,9 @@ export function Home() {
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400 animate-fade-up">
               Karanvir Singh
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-4">{jobTitles[titleIndex]}</p>
+            <p className="text-xl md:text-2xl text-gray-300 mb-4">
+              {jobTitles[titleIndex]}
+            </p>
             <p className="text-lg text-gray-400 mb-8 max-w-2xl mx-auto">
               Passionate software engineer with 2.8 years of experience building
               scalable web applications and innovative solutions using modern
@@ -66,8 +68,7 @@ export function Home() {
               </a>
             </div>
             <Button
-              href="https://drive.google.com/file/d/1RHCTdhV2oQvN2f4dhOEXHOnFeArf_bhs/view?usp=drive_link"
-              download
+              href="https://drive.google.com/uc?export=download&id=1RHCTdhV2oQvN2f4dhOEXHOnFeArf_bhs"
               variant="secondary"
               className="animate-bounce"
             >
