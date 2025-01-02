@@ -120,37 +120,40 @@ export function Home() {
       </SectionWrapper>
 
       {/* Projects Section */}
-      {/* <SectionWrapper>
-        <Heading title="Featured Projects" />
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-          {projects.map((project, index) => (
-            <div key={index} className="p-6 flex flex-col justify-end">
-              <h3 className="text-xl font-semibold mb-2 flex items-center gap-2">
-                {project.title}
-                <ExternalLink className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
-              </h3>
-              <p className="text-gray-300">{project.desc}</p>
-            </div>
-            // <div
-            //   key={index}
-            //   className="group relative overflow-hidden rounded-xl"
-            // >
-            //   <img
-            //     // src={project.image}
-            //     alt={project.title}
-            //     className="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-500"
-            //   />
-            //   <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/70 to-transparent p-6 flex flex-col justify-end">
-            //     <h3 className="text-xl font-semibold mb-2 flex items-center gap-2">
-            //       {project.title}
-            //       <ExternalLink className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
-            //     </h3>
-            //     <p className="text-gray-300">{project.desc}</p>
-            //   </div>
-            // </div>
-          ))}
+      <SectionWrapper>
+  <Heading title="Personal Projects" />
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+    {projects.map((project, index) => (
+      <div
+        key={index}
+        className="group relative overflow-hidden rounded-xl"
+      >
+        {project.image && (
+          <img
+            src={project.image}
+            alt={project.title}
+            className="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-500"
+          />
+        )}
+        <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/70 to-transparent p-6 flex flex-col justify-end">
+          <h3 className="text-xl font-semibold mb-2 flex items-center gap-2">
+            {project.title}
+            <a href={project.link ?? "https://github.com/karanvirsingh011998"}>
+              <ExternalLink className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+            </a>
+          </h3>
+          <p className="text-gray-300 mb-2">{project.desc}</p>
+          {project.techStack && (
+            <p className="text-sm text-gray-400">
+              <strong>Tech Stack:</strong> {project.techStack.join(", ")}
+            </p>
+          )}
         </div>
-      </SectionWrapper> */}
+      </div>
+    ))}
+  </div>
+</SectionWrapper>
+
     </main>
   );
 }
