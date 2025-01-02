@@ -11,16 +11,11 @@ import SectionWrapper from "../components/SectionWrapper";
 import { skills } from "./data/skills";
 import { projects } from "./data/projects";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import Projects from "./Projects";
+import { jobTitles } from "../utils/constants";
 
 export function Home() {
   const [titleIndex, setTitleIndex] = useState(0);
-  const jobTitles = [
-    "Software Engineer",
-    "React.js Developer",
-    "Fullstack Developer",
-    "MERN Stack Developer",
-  ];
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -156,11 +151,9 @@ export function Home() {
       </SectionWrapper>
       
       {/* Organization Projects  */}
-      <SectionWrapper>
-        <Link to="/projects" className="text-xl font-bold text-white">
-          Organization Projects
-        </Link>
-      </SectionWrapper>
+      <Projects />
+      
+        
     </main>
   );
 }
