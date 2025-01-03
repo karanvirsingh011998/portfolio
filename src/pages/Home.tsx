@@ -1,7 +1,6 @@
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { MdMail } from "react-icons/md";
-
 import { ExternalLink, FileDown } from "lucide-react";
 import { Button } from "../components/Button";
 import ExperienceCard from "../components/ExperienceSection";
@@ -63,14 +62,14 @@ export function Home() {
                 <MdMail className="w-8 h-8" />
               </a>
             </div>
-            <Button
-              href="https://drive.google.com/uc?export=download&id=1RHCTdhV2oQvN2f4dhOEXHOnFeArf_bhs"
-              variant="secondary"
+            <a
+              download="karanvir-singh-resume.pdf"
+              href="../assets/images/Reactjs-KaranvirSingh.pdf"
               className="animate-bounce"
             >
               <FileDown className="w-5 h-5" />
               Download Resume
-            </Button>
+            </a>
           </div>
         </div>
       </header>
@@ -149,11 +148,11 @@ export function Home() {
           ))}
         </div>
       </SectionWrapper>
-      
+
       {/* Organization Projects  */}
       <Projects />
-      
-        
+
+
     </main>
   );
 }
