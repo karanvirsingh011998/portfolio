@@ -1,3 +1,4 @@
+import Heading from "../components/Heading";
 import { organizationProjects } from "./data/projects";
 
 const Projects = () => {
@@ -5,7 +6,7 @@ const Projects = () => {
     <main className="min-h-screen py-20">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto px-4 py-8">
-          <h1 className="text-3xl font-bold mb-6">Projects from Organizations</h1>
+          <Heading title="Professional Projects" />
           <p className="text-sm text-gray-400 mb-6">
             Please note: Images are not displayed due to confidentiality. </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
