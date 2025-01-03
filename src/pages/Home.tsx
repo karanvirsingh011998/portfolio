@@ -12,6 +12,8 @@ import { projects } from "./data/projects";
 import { useEffect, useState } from "react";
 import Projects from "./Projects";
 import { jobTitles } from "../utils/constants";
+import resumePDF from "../assets/images/Reactjs-KaranvirSingh.pdf";
+
 
 export function Home() {
   const [titleIndex, setTitleIndex] = useState(0);
@@ -23,7 +25,8 @@ export function Home() {
 
     return () => clearInterval(intervalId); // Clean up on component unmount
   }, []);
-  return (
+
+   return (
     <main>
       {/* Hero Section */}
       <header className="min-h-screen flex items-center justify-center relative overflow-hidden">
@@ -64,7 +67,7 @@ export function Home() {
             </div>
             <Button
               download="karanvir-singh-resume.pdf"
-              href="../assets/images/Reactjs-KaranvirSingh.pdf"
+              href={resumePDF}
               className="animate-bounce"
             >
               <FileDown className="w-5 h-5" />
