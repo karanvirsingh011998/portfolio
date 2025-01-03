@@ -62,14 +62,14 @@ export function Home() {
                 <MdMail className="w-8 h-8" />
               </a>
             </div>
-            <a
+            {/* <Button
               download="karanvir-singh-resume.pdf"
               href="../assets/images/Reactjs-KaranvirSingh.pdf"
               className="animate-bounce"
             >
               <FileDown className="w-5 h-5" />
               Download Resume
-            </a>
+            </Button> */}
           </div>
         </div>
       </header>

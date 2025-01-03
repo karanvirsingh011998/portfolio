@@ -5,7 +5,7 @@ interface ButtonProps {
   children: React.ReactNode;
   variant?: 'primary' | 'secondary';
   href?: string;
-  download?: boolean;
+  download?: string;
   className?: string;
 }
 
