@@ -1,5 +1,7 @@
+import { Mail, MapPin, Phone } from 'lucide-react';  
 
-import { Mail, MapPin, Phone } from 'lucide-react';
+import { FaGithub } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
 import { ContactForm } from '../components/ContactForm';
 
 export function Contact() {
@@ -26,7 +28,7 @@ export function Contact() {
                     </div>
                     <div>
                       <h3 className="font-medium mb-1">Email</h3>
-                      <a href="mailto:karanvir@example.com" className="text-gray-400 hover:text-blue-400 transition-colors">
+                      <a href="mailto:karanvir011998@gmail.com" className="text-gray-400 hover:text-blue-400 transition-colors">
                         karanvir01998@gmail.com
                       </a>
                     </div>
@@ -37,11 +39,34 @@ export function Contact() {
                     </div>
                     <div>
                       <h3 className="font-medium mb-1">Phone</h3>
-                      <a href="tel:+1234567890" className="text-gray-400 hover:text-blue-400 transition-colors">
+                      <a href="tel:+918437333427" className="text-gray-400 hover:text-blue-400 transition-colors">
                         +91 8437333427
                       </a>
                     </div>
                   </div>
+                  <div className="flex items-start gap-4">
+                    <div className="p-3 bg-blue-500/10 rounded-lg">
+                      <FaLinkedin className="w-6 h-6 text-blue-400" />
+                    </div>
+                    <div>
+                      <h3 className="font-medium mb-1">LinkedIn</h3>
+                      <a href="https://www.linkedin.com/in/karanvir-singh-a72a61196/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-400 transition-colors">
+                      linkedin.com/in/karanvir-singh-a72a61196/
+                      </a>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <div className="p-3 bg-blue-500/10 rounded-lg">
+                      <FaGithub className="w-6 h-6 text-blue-400" />
+                    </div>
+                    <div>
+                      <h3 className="font-medium mb-1">GitHub</h3>
+                      <a href="https://github.com/karanvirsingh011998" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-400 transition-colors">
+                      github.com/karanvirsingh011998
+                      </a>
+                    </div>
+                  </div>
+                  
                   <div className="flex items-start gap-4">
                     <div className="p-3 bg-blue-500/10 rounded-lg">
                       <MapPin className="w-6 h-6 text-blue-400" />
@@ -53,14 +78,6 @@ export function Contact() {
                   </div>
                 </div>
               </div>
-
-              {/* <div>
-                <h2 className="text-2xl font-semibold mb-8">Office Hours</h2>
-                <div className="space-y-4 text-gray-400">
-                  <p>Monday - Friday: 9:00 AM - 6:00 PM EST</p>
-                  <p>Saturday - Sunday: By appointment only</p>
-                </div>
-              </div> */}
             </div>
 
             {/* Contact Form */}

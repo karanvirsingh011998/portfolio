@@ -35,6 +35,7 @@ export function Skills() {
         { name: "react-particles", level: 50 },
         { name: "Leaflet Maps", level: 85 },
         { name: "React Particles", level: 55 },
+        { name: "Framer Motion", level: 55 },
       ],
     },
     {

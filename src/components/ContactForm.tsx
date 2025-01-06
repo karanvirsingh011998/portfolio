@@ -29,13 +29,20 @@ export function ContactForm() {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm({
     resolver: yupResolver(schema),
   });
 
   const onSubmit = (data: ContactFormData) => {
-    window.location.href = `mailto:karanvir011998@gmail.com?subject=Enquiry Contact: ${data.name}&body=${data.message}`;
+    
+    const subject = encodeURIComponent(`Enquiry Contact: ${data.name}`);
+    const body = encodeURIComponent(`From: ${data.name} (${data.email})\n\nMessage:\n${data.message}`);
+
+    window.location.href = `mailto:karanvir011998@gmail.com?subject=${subject}&body=${body}`;
+    reset()
+
   };
 
   return (
