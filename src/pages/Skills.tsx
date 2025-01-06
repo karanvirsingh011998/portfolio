@@ -1,58 +1,106 @@
-import { Library, Layout, Database, Workflow } from 'lucide-react';
+import {
+  Library,
+  Layout,
+  Database,
+  Workflow,
+  Bug,
+  Cloud,
+  PenTool,
+  Code,
+} from "lucide-react";
 
 export function Skills() {
   const skillCategories = [
     {
-      title: 'Frontend Libraries & Frameworks',
+      title: "Programming Languages",
+      icon: Code,
+      skills: [
+        { name: "JavaScript (ES6+)", level: 90 },
+        { name: "TypeScript", level: 75 },
+        { name: "HTML5", level: 95 },
+        { name: "CSS3", level: 90 },
+      ],
+    },
+    {
+      title: "Frontend Libraries & Frameworks",
       icon: Library,
       skills: [
-        { name: 'React.js', level: 80 },
-        { name: 'Next.js', level: 60 },
-        { name: 'Material-UI (MUI)', level: 85 },
-        { name: 'Ant Design', level: 85 },
-        { name: 'Shadcn/UI', level: 80 },
-        { name: 'Tailwind CSS', level: 60 },
-        { name: 'next-intl', level: 70 },
-      ]
+        { name: "React.js", level: 80 },
+        { name: "Next.js", level: 60 },
+        { name: "Material-UI (MUI)", level: 85 },
+        { name: "Ant Design", level: 85 },
+        { name: "Shadcn/UI", level: 80 },
+        { name: "Tailwind CSS", level: 60 },
+        { name: "next-intl", level: 70 },
+        { name: "react-particles", level: 50 },
+        { name: "Leaflet Maps", level: 85 },
+        { name: "React Particles", level: 55 },
+      ],
     },
     {
-      title: 'State Management & Data Fetching',
+      title: "State Management & Data Fetching",
       icon: Workflow,
       skills: [
-        { name: 'Redux', level: 65 },
-        { name: 'React Query', level: 80 },
-        { name: 'Axios', level: 85 },
-      ]
+        { name: "Redux", level: 65 },
+        { name: "React Context API", level: 75 },
+        { name: "React Query", level: 80 },
+        { name: "Fetch", level: 85 },
+        { name: "Axios", level: 70 },
+      ],
     },
     {
-      title: 'Form Management & Validation',
+      title: "Form Management & Validation",
       icon: Layout,
       skills: [
-        { name: 'React Hook Form', level: 80 },
-        { name: 'Formik', level: 70 },
-        { name: 'Zod', level: 60 },
-        { name: 'Yup', level: 80 },
-      ]
+        { name: "React Hook Form", level: 80 },
+        { name: "Formik", level: 70 },
+        { name: "Zod", level: 60 },
+        { name: "Yup", level: 80 },
+      ],
     },
     {
-      title: 'Backend & Database',
+      title: "Backend & Database",
       icon: Database,
       skills: [
-        { name: 'Node.js', level: 60 },
-        { name: 'Express.js', level: 60 },
-        { name: 'MongoDB', level: 70 },
-        { name: 'RESTful APIs', level: 60 },
-      ]
+        { name: "Node.js", level: 60 },
+        { name: "Express.js", level: 60 },
+        { name: "MongoDB", level: 70 },
+        { name: "RESTful APIs", level: 60 },
+      ],
     },
     {
-      title: 'Tools & Technologies',
+      title: "Tools & Technologies",
       icon: Database,
       skills: [
-        { name: 'npm/yarn', level: 95 },
-        { name: 'Git', level: 90 },
-        { name: 'Webpack', level: 80 },
-        { name: 'Leaflet Maps', level: 85 },
-      ]
+        { name: "npm/yarn", level: 95 },
+        { name: "Git", level: 90 },
+        { name: "Webpack", level: 80 },
+      ],
+    },
+    {
+      title: "Testing & Debugging",
+      icon: Bug,
+      skills: [
+        { name: "Jest", level: 75 },
+        { name: "React Testing Library", level: 70 },
+        { name: "Browser DevTools", level: 90 },
+      ],
+    },
+    {
+      title: "Deployment & DevOps",
+      icon: Cloud,
+      skills: [
+        { name: "Vercel", level: 60 },
+        { name: "GitHub Pages", level: 70 },
+      ],
+    },
+    {
+      title: "UI/UX Design Tools",
+      icon: PenTool,
+      skills: [
+        { name: "Figma", level: 60 },
+        { name: "Canva", level: 80 },
+      ],
     },
   ];
 
@@ -61,9 +109,12 @@ export function Skills() {
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Technical Skills</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              Technical Skills
+            </h1>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              A comprehensive overview of my technical expertise and proficiency in various technologies.
+              A comprehensive overview of my technical expertise and proficiency
+              in various technologies.
             </p>
           </div>
 
@@ -78,13 +129,16 @@ export function Skills() {
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {category.skills.map((skill, skillIndex) => (
-                    <div key={skillIndex} className="bg-gray-900/50 rounded-lg p-4">
+                    <div
+                      key={skillIndex}
+                      className="bg-gray-900/50 rounded-lg p-4"
+                    >
                       <div className="flex justify-between items-center mb-2">
                         <span className="font-medium">{skill.name}</span>
                         <span className="text-blue-400">{skill.level}%</span>
                       </div>
                       <div className="w-full bg-gray-700 rounded-full h-2">
-                        <div 
+                        <div
                           className="bg-gradient-to-r from-blue-400 to-emerald-400 h-2 rounded-full transition-all duration-500 ease-out"
                           style={{ width: `${skill.level}%` }}
                         />

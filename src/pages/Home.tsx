@@ -13,6 +13,7 @@ import { useEffect, useState } from "react";
 import Projects from "./Projects";
 import { jobTitles } from "../utils/constants";
 import resumePDF from "../assets/images/Reactjs-KaranvirSingh.pdf";
+import HomeEffect from "../components/ParticalsEffect";
 
 
 export function Home() {
@@ -28,6 +29,8 @@ export function Home() {
 
    return (
     <main>
+      <HomeEffect />
+
       {/* Hero Section */}
       <header className="min-h-screen flex items-center justify-center relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80')] bg-cover bg-center opacity-10"></div>
