@@ -44,7 +44,7 @@ const Projects = () => {
             {organizationProjects.map((project, index) => (
               <motion.div
                 key={index}
-                className="p-6 bg-gray-800 text-white rounded-xl shadow-lg"
+                className="p-6 bg-gray-800 text-white rounded-xl shadow-lg z-10"
                 variants={itemVariants}
                 initial="hidden"
                 whileInView="visible"

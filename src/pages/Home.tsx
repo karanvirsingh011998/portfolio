@@ -105,7 +105,7 @@ export function Home() {
           {skills.map((skill, index) => (
             <div
               key={index}
-              className="p-6 rounded-xl bg-gray-800/50 backdrop-blur-sm hover:bg-gray-800 transition-all group"
+              className="p-6 rounded-xl bg-gray-800/50 backdrop-blur-sm hover:bg-gray-800 transition-all group z-10"
             >
               {/* Rendering the icon component */}
               <skill.icon className="w-12 h-12 mb-4 text-blue-400 group-hover:text-emerald-400 transition-colors" />
@@ -127,7 +127,7 @@ export function Home() {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="group relative overflow-hidden rounded-xl"
+              className="group relative overflow-hidden rounded-xl z-10"
             >
               {project.image && (
                 <img
@@ -139,7 +139,7 @@ export function Home() {
               <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/70 to-transparent p-6 flex flex-col justify-end">
                 <h3 className="text-xl font-semibold mb-2 flex items-center gap-2">
                   {project.title}
-                  <a href={project.link ?? "https://github.com/karanvirsingh011998"}>
+                  <a href={project.link ?? "https://github.com/karanvirsingh011998"}  target="_blank" rel="noopener noreferrer">
                     <ExternalLink className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
                   </a>
                 </h3>

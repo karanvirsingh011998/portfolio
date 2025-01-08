@@ -1,14 +1,22 @@
 import realtimetrackingScrenshot from "../../assets/images/realtimeTracking.jpg";
 import pizzaMenu from "../../assets/images/pizzaMenu.jpg";
 import farAway from "../../assets/images/TravelList.png";
+import formValidation from "../../assets/images/formValidation.png";
 
 export const projects = [
   {
     title: "Realtime Tracking",
-    desc: "This project demostrates a real-time location tracking application built with Node.js, Express, Socket.io and Leaflet.js. Live location of user is displayed on an interactive map in real-time",
+    desc: "This project demonstrates a real-time location tracking application built with Node.js, Express, Socket.io and Leaflet.js. Live location of user is displayed on an interactive map in real-time",
     link: "https://github.com/karanvirsingh011998/realtime-tracking",
     image: realtimetrackingScrenshot,
     techStack: ["Express.js", "Socket.io", "Node.js", "Leaflet"],
+  },
+  {
+    title: "Form Validations",
+    desc: "This project demonstrates the form with React hook form and formik, and validations using yup and zod",
+    link: "https://karanvirsingh011998.github.io/FormsAndValidations/",
+    image: formValidation,
+    techStack: ["React.js", "React Hook Form", "Formik", "Yup", "Zod"],
   },
   {
     title: "Far Away - Travel List",
