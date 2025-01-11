@@ -2,9 +2,17 @@ import realtimetrackingScrenshot from "../../assets/images/realtimeTracking.jpg"
 import pizzaMenu from "../../assets/images/pizzaMenu.jpg";
 import farAway from "../../assets/images/TravelList.png";
 import formValidation from "../../assets/images/formValidation.png";
+import concokLandingPage from "../../assets/images/concokLandingPage.png";
+
 
 export const projects = [
   {
+    title: "ConvoK - Real-Time Communication Redefined",
+    desc: "Experience the future of communication with ConvoK! This innovative web app offers secure, real-time chat with dark and light mode support.",
+    link: "https://karanvirsingh011998.github.io/convoK",
+    image: concokLandingPage,
+    techStack: ["React.js", "Shadcn", "Tailwind CSS", "Framer Motion", "React Hook Form", "Yup"],
+  },{
     title: "Realtime Tracking",
     desc: "This project demonstrates a real-time location tracking application built with Node.js, Express, Socket.io and Leaflet.js. Live location of user is displayed on an interactive map in real-time",
     link: "https://github.com/karanvirsingh011998/realtime-tracking",
