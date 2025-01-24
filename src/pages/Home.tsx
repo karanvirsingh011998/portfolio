@@ -1,4 +1,4 @@
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaWhatsapp } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { MdMail } from "react-icons/md";
 import { ExternalLink, FileDown } from "lucide-react";
@@ -158,7 +158,14 @@ export function Home() {
       {/* Organization Projects  */}
       <Projects />
 
-
+      <a
+        href="https://wa.me/8437333427?text=Hello%20there!%20I%20am%20interested%20in%20your%20services." 
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-8 right-8 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg flex items-center justify-center z-50"
+      >
+        <FaWhatsapp className="w-6 h-6" />
+      </a>
     </main>
   );
 }
