@@ -14,7 +14,7 @@ import Projects from "./Projects";
 import { jobTitles } from "../utils/constants";
 import resumePDF from "../assets/images/Reactjs-KaranvirSingh.pdf";
 import HomeEffect from "../components/ParticalsEffect";
-
+import { motion } from "framer-motion";
 
 export function Home() {
   const [titleIndex, setTitleIndex] = useState(0);
@@ -24,10 +24,10 @@ export function Home() {
       setTitleIndex((prevIndex) => (prevIndex + 1) % jobTitles.length);
     }, 2000); // Change title every 2 seconds
 
-    return () => clearInterval(intervalId); // Clean up on component unmount
+    return () => clearInterval(intervalId);
   }, []);
 
-   return (
+  return (
     <main>
       <HomeEffect />
 
@@ -139,7 +139,13 @@ export function Home() {
               <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/70 to-transparent p-6 flex flex-col justify-end">
                 <h3 className="text-xl font-semibold mb-2 flex items-center gap-2">
                   {project.title}
-                  <a href={project.link ?? "https://github.com/karanvirsingh011998"}  target="_blank" rel="noopener noreferrer">
+                  <a
+                    href={
+                      project.link ?? "https://github.com/karanvirsingh011998"
+                    }
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <ExternalLink className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
                   </a>
                 </h3>
@@ -158,14 +164,18 @@ export function Home() {
       {/* Organization Projects  */}
       <Projects />
 
-      <a
-        href="https://wa.me/8437333427?text=Hello%20there!%20I%20am%20interested%20in%20your%20services." 
+      {/* Whatsapp Floating Icon  */}
+      <motion.a
+        href="https://wa.me/8437333427?text=Hello%20there!%20I%20am%20interested%20in%20your%20services."
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-8 right-8 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg flex items-center justify-center z-50"
+        initial={{ opacity: 0, x: 50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.9, ease: "easeOut" }}
       >
-        <FaWhatsapp className="w-6 h-6" />
-      </a>
+        <FaWhatsapp className="w-full h-full" />
+      </motion.a>
     </main>
   );
 }
