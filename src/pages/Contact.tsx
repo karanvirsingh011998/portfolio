@@ -2,7 +2,7 @@ import { Mail, MapPin, Phone } from 'lucide-react';
 
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
-import { ContactForm } from '../components/ContactForm';
+// import { ContactForm } from '../components/ContactForm';
 
 export function Contact() {
   return (
@@ -81,10 +81,10 @@ export function Contact() {
             </div>
 
             {/* Contact Form */}
-            <div className="bg-gray-800/50 rounded-xl p-8">
+            {/* <div className="bg-gray-800/50 rounded-xl p-8">
               <h2 className="text-2xl font-semibold mb-8">Send a Message</h2>
               <ContactForm />
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
