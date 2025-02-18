@@ -1,15 +1,16 @@
 import { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
+import { motion } from "framer-motion";
 
-export function Navigation() {
+export function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location]);
-  
+
   const links = [
     { href: '/', label: 'Home' },
     { href: '/skills', label: 'Skills' },
@@ -22,26 +23,37 @@ export function Navigation() {
     <nav className="fixed w-full z-50 bg-gray-900/90 backdrop-blur-sm">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          <Link to="/" className="text-xl font-bold text-white">
-            KS
-          </Link>
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3 }}
+          >
+            <Link to="/" className="text-xl font-bold text-white">
+              Karanvir Singh
+            </Link>
+          </motion.div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            {links.map((link) => (
-              <Link
-                key={link.href}
-                to={link.href}
-                className={`text-sm font-medium transition-colors ${
-                  location.pathname === link.href
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3 }}
+          >
+            <div className="hidden md:flex items-center space-x-8">
+              {links.map((link) => (
+                <Link
+                  key={link.href}
+                  to={link.href}
+                  className={`text-sm font-medium transition-colors ${location.pathname === link.href
                     ? 'text-blue-400'
                     : 'text-gray-300 hover:text-white'
-                }`}
-              >
-                {link.label}
-              </Link>
-            ))}
-          </div>
+                    }`}
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+          </motion.div>
 
           {/* Mobile Menu Button */}
           <button
@@ -61,11 +73,10 @@ export function Navigation() {
               <Link
                 key={link.href}
                 to={link.href}
-                className={`block px-3 py-2 rounded-md text-base font-medium ${
-                  location.pathname === link.href
-                    ? 'text-blue-400 bg-gray-800'
-                    : 'text-gray-300 hover:text-white hover:bg-gray-700'
-                }`}
+                className={`block px-3 py-2 rounded-md text-base font-medium ${location.pathname === link.href
+                  ? 'text-blue-400 bg-gray-800'
+                  : 'text-gray-300 hover:text-white hover:bg-gray-700'
+                  }`}
                 onClick={() => setIsOpen(false)}
               >
                 {link.label}

@@ -3,18 +3,7 @@ import Heading from "../components/Heading";
 import { organizationProjects } from "./data/projects";
 
 const Projects = () => {
-  const containerVariants = {
-    hidden: { opacity: 0, scale: 0.95 },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      transition: { 
-        delayChildren: 0.2, 
-        staggerChildren: 0.1 
-      },
-    },
-  };
-
+  
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.4 } },
@@ -25,7 +14,7 @@ const Projects = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto px-4 py-8">
           <Heading title="Professional Projects" />
-          <motion.p 
+          <motion.p
             className="text-sm text-gray-400 mb-6"
             initial="hidden"
             whileInView="visible"
@@ -34,13 +23,7 @@ const Projects = () => {
           >
             Please note: Images are not displayed due to confidentiality.
           </motion.p>
-          <motion.div
-            className="grid grid-cols-1 md:grid-cols-2 gap-8"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: false, amount: 0.2 }}
-            variants={containerVariants}
-          >
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {organizationProjects.map((project, index) => (
               <motion.div
                 key={index}
@@ -52,9 +35,9 @@ const Projects = () => {
               >
                 <h3 className="text-xl font-semibold mb-2 flex items-center gap-2">
                   {project.link ? (
-                    <a 
-                      href={project.link} 
-                      target="_blank" 
+                    <a
+                      href={project.link}
+                      target="_blank"
                       rel="noopener noreferrer"
                       className="text-blue-400 hover:underline"
                     >
@@ -77,7 +60,7 @@ const Projects = () => {
                 )}
               </motion.div>
             ))}
-          </motion.div>
+          </div>
         </div>
       </div>
     </motion.main>

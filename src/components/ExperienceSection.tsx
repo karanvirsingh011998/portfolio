@@ -18,7 +18,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
 }) => {
   return (
     <div className="max-w-3xl mx-auto bg-gray-800/50 rounded-xl p-6 backdrop-blur-sm z-10">
-      <div className="flex items-start gap-4">
+      <div className="flex flex-col lg:flex-row items-start gap-4">
         <div className="p-3 bg-blue-500/10 rounded-lg">
           <Building2 className="w-8 h-8 text-blue-400" />
         </div>

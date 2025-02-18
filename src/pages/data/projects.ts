@@ -94,6 +94,8 @@ export const organizationProjects = [
     desc: "Streamlining software projects with customizable workflows, task assignments, and progress tracking. Developed and enhanced frontend features using React.js, integrated Ant Design (antd) components, and utilized Chart.js for data visualization. Used React and Redux for state management in the application along with the use of React Hooks. Build robust backend services and APIs with Node.js and Express.js. Design and implement MongoDB schemas using Mongoose for efficient data storage and retrieval.",
     techStack: ["HTML", "CSS", "Next.js", "Node.js", "Express.js", "MongoDB"],
     libraries: ["redux", "Antd", "Chart.js", "Typescript"],
+    link: "https://planit.thewitslab.com"
+
   },
   {
     title: "Wil Portfolio",
