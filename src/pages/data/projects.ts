@@ -12,7 +12,7 @@ export const projects = [
     link: "https://karanvirsingh011998.github.io/convoK",
     image: concokLandingPage,
     techStack: ["React.js", "Shadcn", "Tailwind CSS", "Framer Motion", "React Hook Form", "Yup"],
-  },{
+  }, {
     title: "Realtime Tracking",
     desc: "This project demonstrates a real-time location tracking application built with Node.js, Express, Socket.io and Leaflet.js. Live location of user is displayed on an interactive map in real-time",
     link: "https://github.com/karanvirsingh011998/realtime-tracking",
@@ -31,8 +31,8 @@ export const projects = [
     desc: "Far Away is a React-based packing list application designed to make travel preparations seamless and efficient.",
     link: "https://karanvirsingh011998.github.io/travel_list/",
     image: farAway,
-    techStack: ["HTML", "CSS", "React.js","React Dom"],
-  }  ,
+    techStack: ["HTML", "CSS", "React.js", "React Dom"],
+  },
   {
     title: "Fast Pizza Co.",
     desc: "This project demostrates a pizza shop menu with the available and unavailable pizza's",
@@ -43,8 +43,13 @@ export const projects = [
 ];
 
 export const organizationProjects = [
-  
+
   {
+    title: "Encapsulate",
+    "desc": "A CRM integration project that connects user accounts with Capsulate CRM. The application allows users to manage their profiles, edit details, and configure settings, including the ability to disconnect their Capsulate account seamlessly. The project ensures smooth data synchronization and a user-friendly experience for managing CRM connections.",
+    techStack: ["HTML", "CSS", "Next.js", "Typescript"],
+    libraries: ["Material UI", "Fromik", "Yup", "React Redux", "React Helmet"],
+  }, {
     title: "Flahybase",
     desc: "A biotechnology company website showcasing an AI-driven ecosystem for Precision Oncology. Flahybase develops cutting-edge detection and diagnostic products powered by artificial intelligence and collaborates with leading institutions to advance targeted therapies. The website features a landing page with sections for About, Diagnostics ,Team,and Contact Us.",
     techStack: ["HTML", "CSS", "Next.js"],
@@ -75,8 +80,8 @@ export const organizationProjects = [
     title: "Wil Website",
     desc: "Wits Innovation Lab is an innovative company focused on driving business growth through the power of cutting-edge technologies. This project involved creating a dynamic and user-friendly company website that highlights the lab's commitment to providing businesses with disruptive technologies to solve complex problems.",
     techStack: ["HTML", "CSS", "Next.js", "Typescript"],
-    libraries: ["Material UI", "Axios", "React Particles" ,"React Hook Form", "Yup"],
-    link:"https://www.thewitslab.com"
+    libraries: ["Material UI", "Axios", "React Particles", "React Hook Form", "Yup"],
+    link: "https://www.thewitslab.com"
   },
   {
     title: "Herbalife Lifestyle Program",
@@ -87,7 +92,7 @@ export const organizationProjects = [
   {
     title: "WePlanIT",
     desc: "Streamlining software projects with customizable workflows, task assignments, and progress tracking. Developed and enhanced frontend features using React.js, integrated Ant Design (antd) components, and utilized Chart.js for data visualization. Used React and Redux for state management in the application along with the use of React Hooks. Build robust backend services and APIs with Node.js and Express.js. Design and implement MongoDB schemas using Mongoose for efficient data storage and retrieval.",
-    techStack: ["HTML", "CSS", "Next.js","Node.js","Express.js","MongoDB"],
+    techStack: ["HTML", "CSS", "Next.js", "Node.js", "Express.js", "MongoDB"],
     libraries: ["redux", "Antd", "Chart.js", "Typescript"],
   },
   {
