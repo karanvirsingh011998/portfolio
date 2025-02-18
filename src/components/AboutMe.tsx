@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import Particles from 'react-tsparticles';
 import profilePic from "../assets/images/profilePic.webp";
 import Heading from "./Heading";
+import { calculateExperience } from '../utils/calculateExperience';
 
 export function AboutMe() {
   return (
@@ -48,7 +49,7 @@ export function AboutMe() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 1 }}
           >
-            I'm Karanvir Singh, a passionate software engineer with 2.8 years of experience in building scalable web applications and innovative solutions.
+            I'm Karanvir Singh, a passionate software engineer with {calculateExperience(2022, 5)} of experience in building scalable web applications and innovative solutions.
           </motion.p>
 
           <div className="w-full md:w-2/3 mx-auto space-y-6">

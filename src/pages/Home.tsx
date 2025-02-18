@@ -15,6 +15,7 @@ import { jobTitles } from "../utils/constants";
 import resumePDF from "../assets/images/Reactjs-KaranvirSingh.pdf";
 import HomeEffect from "../components/ParticalsEffect";
 import { motion } from "framer-motion";
+import { calculateExperience } from "../utils/calculateExperience";
 
 export function Home() {
   const [titleIndex, setTitleIndex] = useState(0);
@@ -43,7 +44,7 @@ export function Home() {
               {jobTitles[titleIndex]}
             </p>
             <p className="text-lg text-gray-400 mb-8 max-w-2xl mx-auto">
-              Passionate software engineer with 2.8 years of experience building
+              Passionate software engineer with {calculateExperience(2022, 5)} of experience building
               scalable web applications and innovative solutions using modern
               technologies.
             </p>
