@@ -22,7 +22,7 @@ const Console: React.FC = () => {
 
   const handleCommand = (cmd: string) => {
     if (cmd === "clear") {
-      setLogs([]);
+      setLogs(["Welcome to the Secret Terminal! Type 'help' to see commands."]);
     } else {
       setLogs((prevLogs) => [...prevLogs, `> ${cmd}`, commands[cmd] || "Unknown command. Type 'help' for a list of commands."]);
     }
