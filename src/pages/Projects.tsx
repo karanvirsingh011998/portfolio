@@ -12,7 +12,7 @@ const Projects = () => {
   return (
     <motion.main className="min-h-screen py-20">
       <div className="container mx-auto px-4">
-        <div className="max-w-6xl mx-auto px-4 py-8">
+        <div className="max-w-6xl mx-auto px-2 sm:px-4 py-2 sm:py-8">
           <Heading title="Professional Projects" />
           <motion.p
             className="text-sm text-gray-400 mb-6"
@@ -27,7 +27,7 @@ const Projects = () => {
             {organizationProjects.map((project, index) => (
               <motion.div
                 key={index}
-                className="p-6 bg-gray-800 text-white rounded-xl shadow-lg z-10"
+                className="p-4 sm:p-6 bg-gray-800 text-white rounded-xl shadow-lg z-10"
                 variants={itemVariants}
                 initial="hidden"
                 whileInView="visible"
@@ -68,4 +68,3 @@ const Projects = () => {
 };
 
 export default Projects;
-  

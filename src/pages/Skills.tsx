@@ -17,14 +17,14 @@ export function Skills() {
 
           <div className="space-y-16">
             {skillCategories.map((category, index) => (
-              <div key={index} className="bg-gray-800/50 rounded-xl p-8">
+              <div key={index} className="bg-gray-800/50 rounded-xl p-4 sm:p-8">
                 <div className="flex items-center gap-4 mb-8">
                   <div className="p-3 bg-blue-500/10 rounded-lg">
                     <category.icon className="w-8 h-8 text-blue-400" />
                   </div>
                   <h2 className="text-2xl font-semibold">{category.title}</h2>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                   {category.skills.map((skill, skillIndex) => (
                     <div
                       key={skillIndex}

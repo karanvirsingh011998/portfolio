@@ -4,7 +4,7 @@ import { MdMail, MdPhone } from "react-icons/md";
 
 export function Footer() {
   return (
-    <footer className="bg-gray-900/50 py-12">
+    <footer className="bg-gray-900/50 py-8 sm:py-12">
       <div className="container mx-auto px-4">
         <div className="flex flex-col items-center justify-center space-y-6">
           {/* Social Links */}
