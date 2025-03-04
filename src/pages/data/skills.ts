@@ -108,7 +108,10 @@ export const skillCategories = [
     icon: Cloud,
     skills: [
       { name: "Vercel", level: 60 },
+      { name: "Render", level: 85 },
       { name: "GitHub Pages", level: 70 },
+      { name: "Railway", level: 85 },
+      { name: "Hostinger", level: 65 },
     ],
   },
   {
