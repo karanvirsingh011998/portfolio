@@ -8,6 +8,7 @@ import { NotFound } from './pages/NotFound';
 import Projects from './pages/Projects';
 import { AboutMe } from './components/AboutMe';
 import { Header } from './components/Header';
+import Terminal from './pages/Terminal';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/bio" element={<AboutMe />} />
+        <Route path="/terminal" element={<Terminal />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
