@@ -93,6 +93,7 @@ export function Home() {
               duration={experience.duration}
               companyUrl={experience.companyUrl}
               responsibilities={experience.responsibilities}
+              techStack={experience.techStack}
             />
           ))}
         </div>

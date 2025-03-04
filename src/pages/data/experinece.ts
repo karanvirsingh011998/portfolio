@@ -14,6 +14,7 @@ export const experiences = [
       "Contributed to the development of reusable UI components and design systems",
       "Participated in code reviews and mentored junior developers on React and frontend best practices",
     ],
+    techStack: ["React.js", "Next.js", "Tailwind CSS", "Capsule CRM", "Node.js", "Express.js", "MongoDB"],
   },
   {
     jobTitle: "Associate Software Engineer",
@@ -27,5 +28,6 @@ export const experiences = [
       "Collaborated with cross-functional teams to deliver high-quality software solutions",
       "Participated in code reviews and mentored junior developers",
     ],
+    techStack: ["React.js", "Next.js", "Node.js", "Express.js", "MongoDB", "MERN Stack"],
   },
 ];
