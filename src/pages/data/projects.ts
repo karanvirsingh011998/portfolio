@@ -10,12 +10,6 @@ import pixelPrintPage from "../../assets/images/pixelPrint.png";
 export const projects = [
   
   {
-    title: "Pixel Print Studios | Best Printing Services in Chandigarh",
-    desc: "Printing Services in Chandigarh",
-    link: "https://www.pixelprintstudios.in/",
-    image: pixelPrintPage,
-    techStack: ["Next.js", "Shadcn", "Tailwind CSS", "Framer Motion", "Vercel"],
-  },{
     title: "ConvoK - Real-Time Communication Redefined",
     desc: "Experience the future of communication with ConvoK! This innovative web app offers secure, real-time chat with dark and light mode support.",
     link: "https://karanvirsingh011998.github.io/convoK",
@@ -52,12 +46,19 @@ export const projects = [
 ];
 
 export const organizationProjects = [
-
+  {
+    title: "Pixel Print Studios | Best Printing Services in Chandigarh",
+    desc: "Printing Services in Chandigarh",
+    link: "https://www.pixelprintstudios.in/",
+    image: pixelPrintPage,
+    techStack: ["Next.js", "Shadcn", "Tailwind CSS", "Framer Motion", "Vercel"],
+  },
   {
     title: "Encapsulate",
     "desc": "A CRM integration project that connects user accounts with Capsulate CRM. The application allows users to manage their profiles, edit details, and configure settings, including the ability to disconnect their Capsulate account seamlessly. The project ensures smooth data synchronization and a user-friendly experience for managing CRM connections.",
     techStack: ["HTML", "CSS", "Next.js", "Typescript"],
     libraries: ["Material UI", "Fromik", "Yup", "React Redux", "React Helmet"],
+    link:"https://capsulecrm.lusites.xyz/"
   }, {
     title: "Flahybase",
     desc: "A biotechnology company website showcasing an AI-driven ecosystem for Precision Oncology. Flahybase develops cutting-edge detection and diagnostic products powered by artificial intelligence and collaborates with leading institutions to advance targeted therapies. The website features a landing page with sections for About, Diagnostics ,Team,and Contact Us.",

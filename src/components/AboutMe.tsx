@@ -1,105 +1,76 @@
 import { motion } from 'framer-motion';
-import Particles from 'react-tsparticles';
-import profilePic from "../assets/images/profilePic.webp";
 import Heading from "./Heading";
 import { calculateExperience } from '../utils/calculateExperience';
 
+const fadeInUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
+};
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { staggerChildren: 0.2 } },
+};
+
 export function AboutMe() {
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-800 to-gray-900 text-white relative overflow-hidden">
-      {/* Particles Background */}
-      <Particles
-        id="tsparticles"
-        options={{
-          particles: {
-            number: {
-              value: 80,
-              density: {
-                enable: true,
-                value_area: 800
-              }
-            },
-            shape: {
-              type: "circle"
-            },
-            size: {
-              value: 3
-            },
-            move: {
-              speed: 1,
-              direction: "none",
-              random: true,
-              straight: false
-            }
-          }
-        }}
-      />
-      
+    <section className="py-20 bg-gradient-to-br from-gray-900 to-black text-white relative overflow-hidden">
       <div className="container mx-auto px-6 relative z-10">
-        <motion.div
+        <motion.div 
           className="flex flex-col items-center text-center"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1 }}
+          variants={containerVariants} 
+          initial="hidden" 
+          animate="visible"
         >
           <Heading title="About Me" />
-          <motion.p
-            className="text-xl text-gray-300 mb-6"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 1 }}
+          <motion.p 
+            className="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed mb-8"
+            variants={fadeInUp}
           >
-            I'm Karanvir Singh, a passionate software engineer with {calculateExperience(2022, 5)} of experience in building scalable web applications and innovative solutions.
+            I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 font-semibold">Karanvir Singh</span>, a passionate <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 font-semibold">Software Engineer</span> with {calculateExperience(2022, 5)} of experience in building scalable web applications. I specialize in <span className="text-green-400">React.js</span>, <span className="text-blue-400">Next.js</span>, and modern frontend technologies, crafting high-performance, user-friendly interfaces.
           </motion.p>
+        </motion.div>
 
-          <div className="w-full md:w-2/3 mx-auto space-y-6">
-            <motion.p
-              className="text-lg text-gray-400"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4, duration: 1 }}
-            >
-              With a strong foundation in front-end development, I specialize in React.js and Next.js, creating seamless and efficient user experiences. I am always eager to learn new technologies and strive to stay at the forefront of industry trends.
-            </motion.p>
-
-            <motion.p
-              className="text-lg text-gray-400"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6, duration: 1 }}
-            >
-              When I'm not coding, I enjoy working on personal projects, exploring new frameworks, and learning about the latest advancements in web development. I believe in building applications that not only work well but also create a delightful user experience.
-            </motion.p>
+        {/* Timeline Section with Links */}
+        <motion.div className="mt-16 text-center" variants={fadeInUp}>
+          <h3 className="text-2xl font-semibold text-gray-200 mb-6">My Journey</h3>
+          <div className="space-y-6 max-w-lg mx-auto">
+            {[
+              { year: "2022", text: "🏁 Started at ", company: "Wits Innovation Lab", link: "https://www.thewitslab.com/" },
+              { year: "2024", text: "🚀 Joined ", company: "Lumino Guru", link: "https://luminoguru.com/" }
+            ].map((event, index) => (
+              <motion.div 
+                key={index} 
+                className="p-4 bg-gray-800 rounded-lg shadow-lg" 
+                whileHover={{ scale: 1.05 }}
+              >
+                {event.text}
+                <a 
+                  href={event.link} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-blue-400 hover:underline font-semibold"
+                >
+                  {event.company}
+                </a> ({event.year})
+              </motion.div>
+            ))}
           </div>
         </motion.div>
 
-        {/* Image with Hover Animation */}
-        <motion.div
-          className="flex justify-center mt-12"
-          whileHover={{ scale: 1.1 }}
-          transition={{ duration: 0.3 }}
-        >
-          <div className="w-80 h-80 rounded-full overflow-hidden border-4 border-gray-700 shadow-lg">
-            <img
-              src={profilePic}
-              alt="Karanvir Singh"
-              className="w-full h-full object-cover"
-            />
-          </div>
+        {/* Achievements Section */}
+        <motion.div className="mt-16 text-center" variants={fadeInUp}>
+          <h3 className="text-2xl font-semibold text-gray-200 mb-6">Achievements</h3>
+          <ul className="list-disc list-inside text-gray-300 text-lg">
+            <li>🏆 Built & deployed <b><a href="https://pixelprintstudios.in/" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">Pixel Print Studios</a></b></li>
+            <li>🚀 {calculateExperience(2022, 5)} experience in <b>React, Next.js & Node.js</b></li>
+          </ul>
         </motion.div>
 
-        <motion.div
-          className="mt-8 text-center"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 2.4, duration: 1 }}
-        >
-          <h3 className="text-2xl font-semibold text-gray-200 mb-4">Let’s Build Something Together</h3>
-          <a
-            href="mailto:karanvir011998@gmail.com"
-            className="px-6 py-2 bg-green-600 text-white rounded-full hover:bg-green-700 transition duration-200 animate-bounce"
-          >
-            Get in Touch
+        {/* Call to Action */}
+        <motion.div className="mt-16 text-center" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+          <a href="mailto:karanvir011998@gmail.com" className="px-8 py-3 bg-gradient-to-r from-green-500 to-blue-500 text-white font-semibold text-lg rounded-full shadow-lg hover:scale-105 transition-transform duration-200">
+            Let’s Build Something Awesome 🚀
           </a>
         </motion.div>
       </div>

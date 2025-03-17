@@ -10,7 +10,6 @@ import SectionWrapper from "../components/SectionWrapper";
 import { skills } from "./data/skills";
 import { projects } from "./data/projects";
 import { useEffect, useState } from "react";
-import Projects from "./Projects";
 import { jobTitles } from "../utils/constants";
 import resumePDF from "../assets/images/Reactjs-KaranvirSingh.pdf";
 import HomeEffect from "../components/ParticalsEffect";
@@ -164,7 +163,7 @@ export function Home() {
       </SectionWrapper>
 
       {/* Organization Projects  */}
-      <Projects />
+      {/* <Projects /> */}
 
       {/* Whatsapp Floating Icon  */}
       <motion.a
