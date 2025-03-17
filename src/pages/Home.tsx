@@ -8,7 +8,7 @@ import { experiences } from "./data/experinece";
 import Heading from "../components/Heading";
 import SectionWrapper from "../components/SectionWrapper";
 import { skills } from "./data/skills";
-import { projects } from "./data/projects";
+import { organizationProjects, projects } from "./data/projects";
 import { useEffect, useState } from "react";
 import { jobTitles } from "../utils/constants";
 import resumePDF from "../assets/images/Reactjs-KaranvirSingh.pdf";
@@ -121,6 +121,119 @@ export function Home() {
         </div>
       </SectionWrapper>
 
+      {/* {project.image && (
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-56 object-cover rounded-t-2xl"
+                />
+              )} */}
+
+      <SectionWrapper>
+        <Heading title="Professional Projects" />
+
+        <motion.div
+          className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-6xl mx-auto z-50"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          {organizationProjects.map((project, index) => (
+            <motion.div
+              key={index}
+              className="relative overflow-hidden rounded-2xl backdrop-blur-sm z-10 shadow-lg group transition-transform transform hover:scale-105"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+            >
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-white mb-2 flex items-center gap-2">
+                  {project.title}
+                  {project.link && (
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-400 hover:text-emerald-400 transition"
+                    >
+                      <ExternalLink className="w-5 h-5" />
+                    </a>
+                  )}
+                </h3>
+
+                <p className="text-gray-300 text-sm mb-4">{project.desc}</p>
+
+                {/* Tech Stack Tags with Hover Animation */}
+                <motion.div
+                  className="flex flex-wrap gap-2"
+                  initial="hidden"
+                  animate="visible"
+                  variants={{
+                    hidden: { opacity: 0 },
+                    visible: {
+                      opacity: 1,
+                      transition: { staggerChildren: 0.1 },
+                    },
+                  }}
+                >
+                  {project.techStack.map((tech, i) => (
+                    <motion.span
+                      key={i}
+                      className="text-xs bg-blue-400/20 text-blue-300 px-2 py-1 rounded-full cursor-pointer"
+                      variants={{
+                        hidden: { opacity: 0, scale: 0.5 },
+                        visible: { opacity: 1, scale: 1 },
+                      }}
+                      transition={{ duration: 0.3 }}
+                      whileHover={{
+                        scale: 1.2,
+                        backgroundColor: "rgba(96, 165, 250, 0.5)", // Light Blue Hover
+                        color: "#ffffff",
+                      }}
+                    >
+                      {tech}
+                    </motion.span>
+                  ))}
+                </motion.div>
+
+                {/* Libraries with Hover Animation */}
+                <motion.div
+                  className="flex flex-wrap gap-2 mt-2"
+                  initial="hidden"
+                  animate="visible"
+                  variants={{
+                    hidden: { opacity: 0 },
+                    visible: {
+                      opacity: 1,
+                      transition: { staggerChildren: 0.1 },
+                    },
+                  }}
+                >
+                  {project.libraries.map((tech, i) => (
+                    <motion.span
+                      key={i}
+                      className="text-xs bg-blue-400/20 text-blue-300 px-2 py-1 rounded-full cursor-pointer"
+                      variants={{
+                        hidden: { opacity: 0, scale: 0.5 },
+                        visible: { opacity: 1, scale: 1 },
+                      }}
+                      transition={{ duration: 0.3 }}
+                      whileHover={{
+                        scale: 1.2,
+                        backgroundColor: "rgba(96, 165, 250, 0.5)", // Light Blue Hover
+                        color: "#ffffff",
+                      }}
+                    >
+                      {tech}
+                    </motion.span>
+                  ))}
+                </motion.div>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
+      </SectionWrapper>
+
       {/* Projects Section */}
       <SectionWrapper>
         <Heading title="Personal Projects" />
@@ -161,9 +274,6 @@ export function Home() {
           ))}
         </div>
       </SectionWrapper>
-
-      {/* Organization Projects  */}
-      {/* <Projects /> */}
 
       {/* Whatsapp Floating Icon  */}
       <motion.a

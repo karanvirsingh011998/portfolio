@@ -98,6 +98,7 @@ const Projects = () => {
                 </h3>
                 <p className="text-gray-300 mb-2">{project.desc}</p>
                 {project.techStack && <p className="text-sm text-gray-400"><strong>Tech:</strong> {project.techStack.join(", ")}</p>}
+                {project.libraries && <p className="text-sm text-gray-400"><strong>Libs:</strong> {project.libraries.join(", ")}</p>}
               </motion.div>
             ))}
           </div>
