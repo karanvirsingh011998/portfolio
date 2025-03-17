@@ -2,15 +2,24 @@ import realtimetrackingScrenshot from "../../assets/images/realtimeTracking.jpg"
 import pizzaMenu from "../../assets/images/pizzaMenu.jpg";
 import farAway from "../../assets/images/TravelList.png";
 import formValidation from "../../assets/images/formValidation.png";
-import concokLandingPage from "../../assets/images/concokLandingPage.png";
+import convokLandingPage from "../../assets/images/convokLandingPage.png";
+import pixelPrintPage from "../../assets/images/pixelPrint.png";
+
 
 
 export const projects = [
+  
   {
+    title: "Pixel Print Studios | Best Printing Services in Chandigarh",
+    desc: "Printing Services in Chandigarh",
+    link: "https://www.pixelprintstudios.in/",
+    image: pixelPrintPage,
+    techStack: ["Next.js", "Shadcn", "Tailwind CSS", "Framer Motion", "Vercel"],
+  },{
     title: "ConvoK - Real-Time Communication Redefined",
     desc: "Experience the future of communication with ConvoK! This innovative web app offers secure, real-time chat with dark and light mode support.",
     link: "https://karanvirsingh011998.github.io/convoK",
-    image: concokLandingPage,
+    image: convokLandingPage,
     techStack: ["React.js", "Shadcn", "Tailwind CSS", "Framer Motion", "React Hook Form", "Yup"],
   }, {
     title: "Realtime Tracking",

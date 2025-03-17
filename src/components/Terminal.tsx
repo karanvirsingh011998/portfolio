@@ -43,14 +43,14 @@ const Console: React.FC = () => {
   }, [logs]);
 
   return (
-    <motion.div 
+    <motion.div
       className="min-h-screen bg-black text-blue-400 font-mono p-4 sm:p-6 flex items-center justify-center"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
     >
       <div className="w-full max-w-2xl border border-blue-500 p-4 rounded-lg shadow-lg flex flex-col">
-        <div 
-          ref={logContainerRef} 
+        <div
+          ref={logContainerRef}
           className="h-64 sm:h-80 overflow-y-auto text-sm space-y-2 p-2 border border-blue-400 rounded-md bg-gray-900 w-full"
         >
           {logs.map((log, i) => (
