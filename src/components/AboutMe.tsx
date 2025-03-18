@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion';
 import Heading from "./Heading";
 import { calculateExperience } from '../utils/calculateExperience';
+import { FaReact, FaNodeJs } from "react-icons/fa";
+import { SiNextdotjs, SiVite, SiAntdesign, SiTypescript, SiMui, SiTailwindcss, SiExpress, SiMongodb, SiFramer, SiShadcnui, SiDaisyui, SiRedux, SiReactquery, SiVercel, SiRailway, SiRender, SiGithub, SiHostinger, SiReacthookform, SiPyup } from "react-icons/si";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
@@ -13,21 +15,54 @@ const containerVariants = {
 };
 
 export function AboutMe() {
+  const techStackVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: (i: any) => ({
+      opacity: 1,
+      y: 0,
+      transition: { delay: i * 0.1, duration: 0.5, ease: "easeOut" },
+    }),
+  };
+  const techStack = [
+    { icon: FaReact, color: "text-blue-500", label: "React.js" },
+    { icon: SiNextdotjs, color: "text-gray-900 dark:text-white", label: "Next.js" },
+    { icon: SiVite, color: "text-purple-500", label: "Vite" },
+    { icon: SiTailwindcss, color: "text-blue-400", label: "Tailwind CSS" },
+    { icon: SiFramer, color: "text-pink-500", label: "Framer Motion" },
+    { icon: SiShadcnui, color: "text-gray-900 dark:text-white", label: "Shadcn UI" },
+    { icon: SiDaisyui, color: "text-yellow-500", label: "Daisy UI" },
+    { icon: SiAntdesign, color: "text-blue-600", label: "Ant Design" },
+    { icon: SiMui, color: "text-blue-500", label: "MUI" },
+    { icon: SiReacthookform, color: "text-orange-500", label: "React Hook Form" },
+    { icon: FaNodeJs, color: "text-green-500", label: "Node.js" },
+    { icon: SiExpress, color: "text-gray-500", label: "Express.js" },
+    { icon: SiMongodb, color: "text-green-600", label: "MongoDB" },
+    { icon: SiTypescript, color: "text-blue-500", label: "TypeScript" },
+    { icon: SiRedux, color: "text-purple-600", label: "Redux" },
+    { icon: SiReactquery, color: "text-red-500", label: "React Query" },
+    { icon: SiVercel, color: "text-white", label: "Vercel" },
+    { icon: SiHostinger, color: "text-purple-500", label: "Hostinger" },
+    { icon: SiRailway, color: "text-blue-500", label: "Railway" },
+    { icon: SiRender, color: "text-purple-700", label: "Render" },
+    { icon: SiGithub, color: "text-gray-900 dark:text-white", label: "GitHub Pages" },
+  ]
+
   return (
     <section className="py-20 bg-gradient-to-br from-gray-900 to-black text-white relative overflow-hidden">
       <div className="container mx-auto px-6 relative z-10">
-        <motion.div 
+        <motion.div
           className="flex flex-col items-center text-center"
-          variants={containerVariants} 
-          initial="hidden" 
+          variants={containerVariants}
+          initial="hidden"
           animate="visible"
         >
           <Heading title="About Me" />
-          <motion.p 
+          <motion.p
             className="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed mb-8"
             variants={fadeInUp}
           >
             I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 font-semibold">Karanvir Singh</span>, a passionate <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 font-semibold">Software Engineer</span> with {calculateExperience(2022, 5)} of experience in building scalable web applications. I specialize in <span className="text-green-400">React.js</span>, <span className="text-blue-400">Next.js</span>, and modern frontend technologies, crafting high-performance, user-friendly interfaces.
+            Additionally, I have expertise in <span className="text-yellow-400">Node.js</span> and <span className="text-green-500">MongoDB</span>, enabling me to build robust, full-stack applications with seamless backend integration.
           </motion.p>
         </motion.div>
 
@@ -39,16 +74,16 @@ export function AboutMe() {
               { year: "2022", text: "🏁 Started at ", company: "Wits Innovation Lab", link: "https://www.thewitslab.com/" },
               { year: "2024", text: "🚀 Joined ", company: "Lumino Guru", link: "https://luminoguru.com/" }
             ].map((event, index) => (
-              <motion.div 
-                key={index} 
-                className="p-4 bg-gray-800 rounded-lg shadow-lg" 
+              <motion.div
+                key={index}
+                className="p-4 bg-gray-800 rounded-lg shadow-lg"
                 whileHover={{ scale: 1.05 }}
               >
                 {event.text}
-                <a 
-                  href={event.link} 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
+                <a
+                  href={event.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-blue-400 hover:underline font-semibold"
                 >
                   {event.company}
@@ -57,6 +92,35 @@ export function AboutMe() {
             ))}
           </div>
         </motion.div>
+
+        {/* Tech Stack */}
+        <motion.div
+      className="mt-16 text-center"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 0.5, duration: 0.8, ease: "easeOut" }}
+    >
+      <h3 className="text-2xl font-semibold text-gray-200 mb-6">Tech Stack</h3>
+      <div className="font-semibold mb-6 grid grid-cols-2 md:grid-cols-5 gap-6 justify-center text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
+        {techStack.map(({ icon: Icon, color, label }, index) => (
+          <motion.div
+            key={index}
+            custom={index}
+            initial="hidden"
+            animate="visible"
+            variants={techStackVariants}
+            whileHover={{ scale: 1.2, y: -5, transition: { duration: 0.3 } }}
+            className="flex flex-col items-center gap-4 cursor-pointer"
+          >
+            <Icon size={40} className={color} />
+            <p className="text-sm">{label}</p>
+          </motion.div>
+        ))}
+      </div>
+    </motion.div>
+
+
+
 
         {/* Achievements Section */}
         <motion.div className="mt-16 text-center" variants={fadeInUp}>

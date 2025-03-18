@@ -130,7 +130,7 @@ export function Home() {
               )} */}
 
       <SectionWrapper>
-        <Heading title="Professional Projects" />
+        <Heading title="Projects" />
 
         <motion.div
           className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-6xl mx-auto z-50"
@@ -138,7 +138,7 @@ export function Home() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          {organizationProjects.map((project, index) => (
+          {[...organizationProjects, ...projects].map((project, index) => (
             <motion.div
               key={index}
               className="relative overflow-hidden rounded-2xl backdrop-blur-sm z-10 shadow-lg group transition-transform transform hover:scale-105"
@@ -163,7 +163,6 @@ export function Home() {
 
                 <p className="text-gray-300 text-sm mb-4">{project.desc}</p>
 
-                {/* Tech Stack Tags with Hover Animation */}
                 <motion.div
                   className="flex flex-wrap gap-2"
                   initial="hidden"
@@ -196,7 +195,6 @@ export function Home() {
                   ))}
                 </motion.div>
 
-                {/* Libraries with Hover Animation */}
                 <motion.div
                   className="flex flex-wrap gap-2 mt-2"
                   initial="hidden"
@@ -209,7 +207,7 @@ export function Home() {
                     },
                   }}
                 >
-                  {project.libraries.map((tech, i) => (
+                  {project.libraries && project.libraries.map((tech, i) => (
                     <motion.span
                       key={i}
                       className="text-xs bg-blue-400/20 text-blue-300 px-2 py-1 rounded-full cursor-pointer"
@@ -235,7 +233,7 @@ export function Home() {
       </SectionWrapper>
 
       {/* Projects Section */}
-      <SectionWrapper>
+      {/* <SectionWrapper>
         <Heading title="Personal Projects" />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {projects.map((project, index) => (
@@ -273,7 +271,7 @@ export function Home() {
             </div>
           ))}
         </div>
-      </SectionWrapper>
+      </SectionWrapper> */}
 
       {/* Whatsapp Floating Icon  */}
       <motion.a

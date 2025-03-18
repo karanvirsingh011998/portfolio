@@ -115,7 +115,7 @@ const Projects = () => {
 
           {/* Call-to-Action Section */}
           <div className="mt-12 text-center">
-            <h2 className="text-2xl font-bold text-white">Want to Work With Me?</h2>
+            <h2 className="text-2xl font-bold text-white">Want to Work With Me or Hire Me?</h2>
             <p className="text-gray-400 mt-2">Let's build something amazing together!</p>
             <a href="https://wa.me/8437333427?text=Hello%20there!%20I%20am%20interested%20in%20your%20services."
               target="_blank"

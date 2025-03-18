@@ -8,19 +8,21 @@ import pixelPrintPage from "../../assets/images/pixelPrint.png";
 
 
 export const projects = [
-  
+
   {
     title: "ConvoK - Real-Time Communication Redefined",
     desc: "Experience the future of communication with ConvoK! This innovative web app offers secure, real-time chat with dark and light mode support.",
     link: "https://karanvirsingh011998.github.io/convoK",
     image: convokLandingPage,
     techStack: ["React.js", "Shadcn", "Tailwind CSS", "Framer Motion", "React Hook Form", "Yup"],
+    libraries: []
   }, {
     title: "Realtime Tracking",
     desc: "This project demonstrates a real-time location tracking application built with Node.js, Express, Socket.io and Leaflet.js. Live location of user is displayed on an interactive map in real-time",
     link: "https://github.com/karanvirsingh011998/realtime-tracking",
     image: realtimetrackingScrenshot,
     techStack: ["Express.js", "Socket.io", "Node.js", "Leaflet"],
+    libraries: []
   },
   {
     title: "Form Validations",
@@ -28,6 +30,7 @@ export const projects = [
     link: "https://karanvirsingh011998.github.io/FormsAndValidations/",
     image: formValidation,
     techStack: ["React.js", "React Hook Form", "Formik", "Yup", "Zod"],
+    libraries: []
   },
   {
     title: "Far Away - Travel List",
@@ -42,15 +45,16 @@ export const projects = [
     link: "https://github.com/karanvirsingh011998/pizzaMenu",
     image: pizzaMenu,
     techStack: ["HTML", "CSS", "React.js"],
+    libraries: []
   },
 ];
 
 export const organizationProjects = [
   {
-    title: "Pixel Print Studios | Best Printing Services in Chandigarh",
-    desc: "Printing Services in Chandigarh",
+    title: "Pixel Print Studios",
+    desc: "Pixel Prints Studios is your one-stop destination for all your printing, gifting, and corporate branding needs. We specialize in high-quality custom printing services, offering everything from T-shirt printing to brochures, business cards, banners, and more. In addition to our printing services, we offer a wide range of personalized gifting options, perfect for special occasions or unique corporate gifts. Whether you’re looking for promotional merchandise, custom-designed gifts, or branded items for your business, Pixel Prints Studios delivers high-quality products with a professional touch.",
     link: "https://www.pixelprintstudios.in/",
-    image: pixelPrintPage,
+    // image: pixelPrintPage,
     techStack: ["Next.js", "Typescript", "Vercel"],
     libraries: ["Shadcn", "Shadcn", "Tailwind CSS", "Framer Motion"],
   },
@@ -59,7 +63,7 @@ export const organizationProjects = [
     desc: "A CRM integration project that connects user accounts with Capsulate CRM. The application allows users to manage their profiles, edit details, and configure settings, including the ability to disconnect their Capsulate account seamlessly. The project ensures smooth data synchronization and a user-friendly experience for managing CRM connections.",
     techStack: ["HTML", "CSS", "Next.js", "Typescript"],
     libraries: ["Material UI", "Fromik", "Yup", "React Redux", "React Helmet"],
-    link:"https://capsulecrm.lusites.xyz/"
+    link: "https://capsulecrm.lusites.xyz/"
   }, {
     title: "Flahybase",
     desc: "A biotechnology company website showcasing an AI-driven ecosystem for Precision Oncology. Flahybase develops cutting-edge detection and diagnostic products powered by artificial intelligence and collaborates with leading institutions to advance targeted therapies. The website features a landing page with sections for About, Diagnostics ,Team,and Contact Us.",
