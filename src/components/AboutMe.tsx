@@ -95,29 +95,29 @@ export function AboutMe() {
 
         {/* Tech Stack */}
         <motion.div
-      className="mt-16 text-center"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ delay: 0.5, duration: 0.8, ease: "easeOut" }}
-    >
-      <h3 className="text-2xl font-semibold text-gray-200 mb-6">Tech Stack</h3>
-      <div className="font-semibold mb-6 grid grid-cols-2 md:grid-cols-5 gap-6 justify-center text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
-        {techStack.map(({ icon: Icon, color, label }, index) => (
-          <motion.div
-            key={index}
-            custom={index}
-            initial="hidden"
-            animate="visible"
-            variants={techStackVariants}
-            whileHover={{ scale: 1.2, y: -5, transition: { duration: 0.3 } }}
-            className="flex flex-col items-center gap-4 cursor-pointer"
-          >
-            <Icon size={40} className={color} />
-            <p className="text-sm">{label}</p>
-          </motion.div>
-        ))}
-      </div>
-    </motion.div>
+          className="mt-16 text-center"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5, duration: 0.8, ease: "easeOut" }}
+        >
+          <h3 className="text-2xl font-semibold text-gray-200 mb-6">Tech Stack</h3>
+          <div className="font-semibold mb-6 grid grid-cols-2 md:grid-cols-5 gap-6 justify-center text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
+            {techStack.map(({ icon: Icon, color, label }, index) => (
+              <motion.div
+                key={index}
+                custom={index}
+                initial="hidden"
+                animate="visible"
+                variants={techStackVariants}
+                whileHover={{ scale: 1.2, y: -5, transition: { duration: 0.3 } }}
+                className="flex flex-col items-center gap-4 cursor-pointer"
+              >
+                <Icon size={40} className={color} />
+                <p className="text-sm">{label}</p>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
 
 
 
@@ -134,7 +134,8 @@ export function AboutMe() {
         {/* Call to Action */}
         <motion.div className="mt-16 text-center" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
           <a href="mailto:karanvir011998@gmail.com" className="px-8 py-3 bg-gradient-to-r from-green-500 to-blue-500 text-white font-semibold text-lg rounded-full shadow-lg hover:scale-105 transition-transform duration-200">
-            Let’s Build Something Awesome 🚀
+            <span className="hidden sm:inline">Let’s Build Something Awesome 🚀</span>
+            <span className="sm:hidden">Let's Build 🚀</span>
           </a>
         </motion.div>
       </div>
