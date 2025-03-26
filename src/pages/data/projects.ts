@@ -3,7 +3,6 @@ import pizzaMenu from "../../assets/images/pizzaMenu.jpg";
 import farAway from "../../assets/images/TravelList.png";
 import formValidation from "../../assets/images/formValidation.png";
 import convokLandingPage from "../../assets/images/convokLandingPage.png";
-import pixelPrintPage from "../../assets/images/pixelPrint.png";
 
 
 
@@ -54,7 +53,6 @@ export const organizationProjects = [
     title: "Pixel Print Studios",
     desc: "Pixel Prints Studios is your one-stop destination for all your printing, gifting, and corporate branding needs. We specialize in high-quality custom printing services, offering everything from T-shirt printing to brochures, business cards, banners, and more. In addition to our printing services, we offer a wide range of personalized gifting options, perfect for special occasions or unique corporate gifts. Whether you’re looking for promotional merchandise, custom-designed gifts, or branded items for your business, Pixel Prints Studios delivers high-quality products with a professional touch.",
     link: "https://www.pixelprintstudios.in/",
-    // image: pixelPrintPage,
     techStack: ["Next.js", "Typescript", "Vercel"],
     libraries: ["Shadcn", "Shadcn", "Tailwind CSS", "Framer Motion"],
   },
