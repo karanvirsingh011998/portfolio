@@ -1,4 +1,5 @@
 import { FaReact, FaNodeJs, FaServer, FaDatabase } from "react-icons/fa";
+import { TbBrandReactNative } from "react-icons/tb";
 import { SiNextdotjs } from "react-icons/si";
 import { IoLogoCss3 } from "react-icons/io";
 import {
@@ -14,6 +15,7 @@ import {
 
 export const skills = [
   { icon: FaReact, title: "React.js", desc: "Frontend Library" },
+  { icon: TbBrandReactNative, title: "React Native", desc: "Frontend Library for Mobile" },
   { icon: SiNextdotjs, title: "Next.js", desc: "Frontend Framework" },
   { icon: IoLogoCss3, title: "Tailwind CSS", desc: "CSS Framework" },
   { icon: FaNodeJs, title: "Node.js", desc: "Runtime Environment" },
@@ -37,6 +39,7 @@ export const skillCategories = [
     icon: Library,
     skills: [
       { name: "React.js", level: 80 },
+      { name: "React Native", level: 60 },
       { name: "Next.js", level: 60 },
       { name: "Material-UI (MUI)", level: 85 },
       { name: "Ant Design", level: 85 },
