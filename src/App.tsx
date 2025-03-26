@@ -1,4 +1,3 @@
-
 import { Routes, Route } from 'react-router-dom';
 import { Home } from './pages/Home';
 import { Skills } from './pages/Skills';
@@ -9,18 +8,25 @@ import Projects from './pages/Projects';
 import { AboutMe } from './components/AboutMe';
 import { Header } from './components/Header';
 import Terminal from './pages/Terminal';
+import Layout from './components/Layout';
+
+const routes = [
+  { path: "/", component: <Home /> },
+  { path: "/skills", component: <Skills /> },
+  { path: "/contact", component: <Contact /> },
+  { path: "/projects", component: <Projects /> },
+  { path: "/bio", component: <AboutMe /> },
+  { path: "/terminal", component: <Terminal /> },
+];
 
 function App() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 text-white">
       <Header />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/skills" element={<Skills />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/bio" element={<AboutMe />} />
-        <Route path="/terminal" element={<Terminal />} />
+        {routes.map(({ path, component }) => (
+          <Route key={path} path={path} element={<Layout>{component}</Layout>} />
+        ))}
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />

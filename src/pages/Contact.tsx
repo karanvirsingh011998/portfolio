@@ -1,6 +1,7 @@
 import { Mail, MapPin, Phone, Code, Smartphone, Settings } from 'lucide-react';
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { motion } from 'framer-motion';
+import { FAQs } from '../components/FAQ';
 
 export function Contact() {
   const services = [
@@ -10,12 +11,12 @@ export function Contact() {
   ];
 
   const faqs = [
-    { question: "What technologies do you specialize in?", answer: "I specialize in React, Next.js, Tailwind CSS, and the MERN stack." },
+    { question: "What technologies do you specialize in?", answer: "I specialize in React.js, Next.js, React Native, Tailwind CSS, and the MERN stack." },
     { question: "Do you offer website maintenance?", answer: "Yes, I provide ongoing support and maintenance for websites and applications." },
     { question: "How long does a project take?", answer: "Timelines vary based on complexity. A basic site may take 2-4 weeks, while larger projects take longer." },
     { question: "Do you work with startups and small businesses?", answer: "Absolutely! I enjoy helping startups and small businesses establish their online presence." },
     { question: "Can you redesign an existing website?", answer: "Yes, I can revamp your existing site to improve performance, aesthetics, and user experience." },
-    { question: "Do you provide hosting services?", answer: "I can recommend and help set up hosting, but I primarily focus on development." },
+    { question: "Do you provide hosting services?", answer: "Yes, we provide hosting services along with development. We can help you set up and manage hosting on platforms like Vercel, Hostinger, Railway, Render, and others, ensuring a seamless deployment for your website or application." },
     { question: "What is your pricing model?", answer: "Pricing depends on project complexity and scope. Contact me for a customized quote." }
   ];
 
@@ -32,7 +33,7 @@ export function Contact() {
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Heading */}
-          <motion.h1 
+          <motion.h1
             className="text-4xl md:text-5xl font-bold mb-6 text-center"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -40,16 +41,16 @@ export function Contact() {
           >
             Get in Touch
           </motion.h1>
-          
-          <motion.div className="grid grid-cols-1 lg:grid-cols-2 gap-12" 
-            initial="hidden" 
-            animate="visible" 
+
+          <motion.div className="grid grid-cols-1 lg:grid-cols-2 gap-12"
+            initial="hidden"
+            animate="visible"
             variants={{
               hidden: { opacity: 0, y: 20 },
               visible: { opacity: 1, y: 0, transition: { staggerChildren: 0.2 } }
             }}
           >
-             <div className="space-y-6">
+            <div className="space-y-6">
               {details.map((detail, index) => (
                 <motion.div key={index} className="flex items-start gap-4 p-4 bg-gray-800 rounded-lg shadow-lg cursor-pointer"
                   whileHover={{ rotate: 2, scale: 1.05 }}
@@ -68,7 +69,7 @@ export function Contact() {
                 </motion.div>
               ))}
             </div>
-            
+
             {/* Services */}
             <motion.div className="bg-gray-800/50 rounded-xl p-2" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.6 }}>
               <div className="text-center mb-6">
@@ -87,22 +88,9 @@ export function Contact() {
               </div>
             </motion.div>
           </motion.div>
-          
+
           {/* FAQs */}
-          <motion.div className="mt-10" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-            <h2 className="text-3xl font-semibold mb-6 text-center">Frequently Asked Questions</h2>
-            <div className="max-w-3xl mx-auto space-y-4">
-              {faqs.map((faq, index) => (
-                <motion.div key={index} className="p-4 bg-gray-800 rounded-lg"
-                  whileHover={{ scale: 1.02, backgroundColor: "rgba(255, 255, 255, 0.1)" }}
-                  transition={{ duration: 0.3 }}
-                >
-                  <h3 className="text-xl font-semibold">{faq.question}</h3>
-                  <p className="text-gray-400 mt-2">{faq.answer}</p>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
+          <FAQs />
         </div>
       </div>
     </main>

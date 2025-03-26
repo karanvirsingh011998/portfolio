@@ -2,7 +2,8 @@ import { motion } from 'framer-motion';
 import Heading from "./Heading";
 import { calculateExperience } from '../utils/calculateExperience';
 import { FaReact, FaNodeJs } from "react-icons/fa";
-import { SiNextdotjs, SiVite, SiAntdesign, SiTypescript, SiMui, SiTailwindcss, SiExpress, SiMongodb, SiFramer, SiShadcnui, SiDaisyui, SiRedux, SiReactquery, SiVercel, SiRailway, SiRender, SiGithub, SiHostinger, SiReacthookform, SiPyup } from "react-icons/si";
+import { TbBrandReactNative } from "react-icons/tb";
+import { SiNextdotjs, SiVite, SiAntdesign, SiTypescript, SiMui, SiTailwindcss, SiExpress, SiMongodb, SiFramer, SiShadcnui, SiDaisyui, SiRedux, SiReactquery, SiVercel, SiRailway, SiRender, SiGithub, SiHostinger, SiReacthookform, SiEslint, SiPrettier, SiJsonwebtokens, SiStyledcomponents, SiZod, SiStrapi, SiExpo, SiNativescript } from "react-icons/si";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
@@ -23,21 +24,29 @@ export function AboutMe() {
       transition: { delay: i * 0.1, duration: 0.5, ease: "easeOut" },
     }),
   };
+
   const techStack = [
     { icon: FaReact, color: "text-blue-500", label: "React.js" },
     { icon: SiNextdotjs, color: "text-gray-900 dark:text-white", label: "Next.js" },
+    { icon: SiTypescript, color: "text-blue-500", label: "TypeScript" },
     { icon: SiVite, color: "text-purple-500", label: "Vite" },
+    { icon: TbBrandReactNative, color: "text-blue-500", label: "React Native" },
+    { icon: SiExpo, color: "text-purple-700", label: "Expo Router" },
+    { icon: SiNativescript, color: "text-red-600", label: "NativeScript" },
     { icon: SiTailwindcss, color: "text-blue-400", label: "Tailwind CSS" },
+    { icon: SiStyledcomponents, color: "text-pink-400", label: "Styled Components" },
     { icon: SiFramer, color: "text-pink-500", label: "Framer Motion" },
     { icon: SiShadcnui, color: "text-gray-900 dark:text-white", label: "Shadcn UI" },
     { icon: SiDaisyui, color: "text-yellow-500", label: "Daisy UI" },
     { icon: SiAntdesign, color: "text-blue-600", label: "Ant Design" },
     { icon: SiMui, color: "text-blue-500", label: "MUI" },
     { icon: SiReacthookform, color: "text-orange-500", label: "React Hook Form" },
+    { icon: SiZod, color: "text-blue-600", label: "Zod" },
+    { icon: SiJsonwebtokens, color: "text-blue-500", label: "JWT" },
     { icon: FaNodeJs, color: "text-green-500", label: "Node.js" },
     { icon: SiExpress, color: "text-gray-500", label: "Express.js" },
     { icon: SiMongodb, color: "text-green-600", label: "MongoDB" },
-    { icon: SiTypescript, color: "text-blue-500", label: "TypeScript" },
+    { icon: SiStrapi, color: "text-gray-600", label: "Strapi" },
     { icon: SiRedux, color: "text-purple-600", label: "Redux" },
     { icon: SiReactquery, color: "text-red-500", label: "React Query" },
     { icon: SiVercel, color: "text-white", label: "Vercel" },
@@ -45,6 +54,8 @@ export function AboutMe() {
     { icon: SiRailway, color: "text-blue-500", label: "Railway" },
     { icon: SiRender, color: "text-purple-700", label: "Render" },
     { icon: SiGithub, color: "text-gray-900 dark:text-white", label: "GitHub Pages" },
+    { icon: SiEslint, color: "text-purple-500", label: "ESLint" },
+    { icon: SiPrettier, color: "text-pink-400", label: "Prettier" }
   ]
 
   return (
@@ -62,7 +73,7 @@ export function AboutMe() {
             variants={fadeInUp}
           >
             I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 font-semibold">Karanvir Singh</span>, a passionate <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 font-semibold">Software Engineer</span> with {calculateExperience(2022, 5)} of experience in building scalable web applications. I specialize in <span className="text-green-400">React.js</span>, <span className="text-blue-400">Next.js</span>, and modern frontend technologies, crafting high-performance, user-friendly interfaces.
-            Additionally, I have expertise in <span className="text-yellow-400">Node.js</span> and <span className="text-green-500">MongoDB</span>, enabling me to build robust, full-stack applications with seamless backend integration.
+            Additionally, I have expertise in <span className="text-green-400">React Native</span>, <span className="text-yellow-400">Node.js</span> and <span className="text-green-500">MongoDB</span>, enabling me to build robust, full-stack applications with seamless backend integration.
           </motion.p>
         </motion.div>
 
@@ -119,15 +130,12 @@ export function AboutMe() {
           </div>
         </motion.div>
 
-
-
-
         {/* Achievements Section */}
         <motion.div className="mt-16 text-center" variants={fadeInUp}>
           <h3 className="text-2xl font-semibold text-gray-200 mb-6">Achievements</h3>
           <ul className="list-disc list-inside text-gray-300 text-lg">
             <li>🏆 Built & deployed <b><a href="https://pixelprintstudios.in/" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">Pixel Print Studios</a></b></li>
-            <li>🚀 {calculateExperience(2022, 5)} experience in <b>React, Next.js & Node.js</b></li>
+            <li>🚀 {calculateExperience(2022, 5)} experience in <b>React, Next.js, React Native & Node.js</b></li>
           </ul>
         </motion.div>
 

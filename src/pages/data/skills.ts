@@ -14,14 +14,15 @@ import {
 } from "lucide-react";
 
 export const skills = [
-  { icon: FaReact, title: "React.js", desc: "Frontend Library" },
-  { icon: TbBrandReactNative, title: "React Native", desc: "Frontend Library for Mobile" },
-  { icon: SiNextdotjs, title: "Next.js", desc: "Frontend Framework" },
-  { icon: IoLogoCss3, title: "Tailwind CSS", desc: "CSS Framework" },
-  { icon: FaNodeJs, title: "Node.js", desc: "Runtime Environment" },
-  { icon: FaServer, title: "Express.js", desc: "Backend Framework" },
-  { icon: FaDatabase, title: "MongoDB", desc: "NoSQL Database" },
+  { icon: FaReact, title: "React.js", desc: "A powerful JavaScript library for building user interfaces" },
+  { icon: TbBrandReactNative, title: "React Native", desc: "A framework for building cross-platform mobile applications" },
+  { icon: SiNextdotjs, title: "Next.js", desc: "A React-based framework for server-side rendering and static site generation" },
+  { icon: IoLogoCss3, title: "Tailwind CSS", desc: "A utility-first CSS framework for building modern and responsive UIs" },
+  { icon: FaNodeJs, title: "Node.js", desc: "A JavaScript runtime environment for building scalable server-side applications" },
+  { icon: FaServer, title: "Express.js", desc: "A minimalist backend framework for building web APIs with Node.js" },
+  { icon: FaDatabase, title: "MongoDB", desc: "A flexible NoSQL database for scalable and high-performance applications" },
 ];
+
 
 export const skillCategories = [
   {
