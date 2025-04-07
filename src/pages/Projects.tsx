@@ -92,7 +92,7 @@ const Projects = () => {
                   </a>
                 )}
                 <h3 className="text-xl font-semibold mb-2">
-                  <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">
+                  <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-emerald-400 transition">
                     {project.title}
                   </a>
                 </h3>
