@@ -5,3 +5,4 @@ export const jobTitles = [
     "Fullstack Developer",
     "MERN Stack Developer",
 ];
+

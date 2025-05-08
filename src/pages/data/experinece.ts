@@ -9,13 +9,15 @@ export const experiences = [
       "Designed and implemented responsive user interfaces using Tailwind CSS",
       "Worked closely with backend developers to integrate APIs with React.js applications",
       "Optimized web applications for performance and SEO using Next.js",
+      "Implemented and integrated Capsule CRM APIs to enhance business workflows",
       "Collaborated with cross-functional teams to deliver high-quality software solutions",
       "Contributed to the development of reusable UI components and design systems",
       "Participated in code reviews and mentored junior developers on React and frontend best practices",
     ],
+    techStack: ["React.js", "Next.js", "Tailwind CSS", "Capsule CRM", "Node.js", "Express.js", "MongoDB"],
   },
   {
-    jobTitle: "Software Engineer",
+    jobTitle: "Associate Software Engineer",
     companyName: "Wits Innovation Lab",
     duration: "May 2022 - Oct 2024 (2 years 6 months)",
     companyUrl: "https://witsinnovationlab.com",
@@ -26,5 +28,6 @@ export const experiences = [
       "Collaborated with cross-functional teams to deliver high-quality software solutions",
       "Participated in code reviews and mentored junior developers",
     ],
+    techStack: ["React.js", "Next.js", "Node.js", "Express.js", "MongoDB", "MERN Stack"],
   },
 ];

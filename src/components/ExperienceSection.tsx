@@ -7,6 +7,7 @@ interface ExperienceCardProps {
   duration: string;
   companyUrl: string;
   responsibilities: string[];
+  techStack: string[];
 }
 
 const ExperienceCard: React.FC<ExperienceCardProps> = ({
@@ -15,10 +16,11 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
   duration,
   companyUrl,
   responsibilities,
+  techStack
 }) => {
   return (
     <div className="max-w-3xl mx-auto bg-gray-800/50 rounded-xl p-6 backdrop-blur-sm z-10">
-      <div className="flex items-start gap-4">
+      <div className="flex flex-col lg:flex-row items-start gap-4">
         <div className="p-3 bg-blue-500/10 rounded-lg">
           <Building2 className="w-8 h-8 text-blue-400" />
         </div>
@@ -36,6 +38,17 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
               <li key={index}>• {responsibility}</li>
             ))}
           </ul>
+          {/* Tech Stack */}
+          <div className="mt-4">
+                  <strong className="text-gray-400">Tech Stack:</strong>
+                  <div className="flex flex-wrap gap-2 mt-1">
+                    {techStack.map((tech, i) => (
+                      <span key={i} className="px-3 py-1 text-sm bg-blue-500/10 text-blue-400 rounded-full">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
         </div>
       </div>
     </div>

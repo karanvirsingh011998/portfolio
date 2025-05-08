@@ -8,13 +8,14 @@ import { experiences } from "./data/experinece";
 import Heading from "../components/Heading";
 import SectionWrapper from "../components/SectionWrapper";
 import { skills } from "./data/skills";
-import { projects } from "./data/projects";
+import { organizationProjects, projects } from "./data/projects";
 import { useEffect, useState } from "react";
-import Projects from "./Projects";
 import { jobTitles } from "../utils/constants";
 import resumePDF from "../assets/images/Reactjs-KaranvirSingh.pdf";
 import HomeEffect from "../components/ParticalsEffect";
 import { motion } from "framer-motion";
+import { calculateExperience } from "../utils/calculateExperience";
+import WhatsappConnect from "../components/WhatsappConnect";
 
 export function Home() {
   const [titleIndex, setTitleIndex] = useState(0);
@@ -43,7 +44,7 @@ export function Home() {
               {jobTitles[titleIndex]}
             </p>
             <p className="text-lg text-gray-400 mb-8 max-w-2xl mx-auto">
-              Passionate software engineer with 2.8 years of experience building
+              Passionate software engineer with {calculateExperience(2022, 5)} of experience building
               scalable web applications and innovative solutions using modern
               technologies.
             </p>
@@ -92,6 +93,7 @@ export function Home() {
               duration={experience.duration}
               companyUrl={experience.companyUrl}
               responsibilities={experience.responsibilities}
+              techStack={experience.techStack}
             />
           ))}
         </div>
@@ -120,8 +122,119 @@ export function Home() {
         </div>
       </SectionWrapper>
 
-      {/* Projects Section */}
+      {/* {project.image && (
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-56 object-cover rounded-t-2xl"
+                />
+              )} */}
+
       <SectionWrapper>
+        <Heading title="Projects" />
+
+        <motion.div
+          className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-6xl mx-auto z-50"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          {[...organizationProjects, ...projects].map((project, index) => (
+            <motion.div
+              key={index}
+              className="relative overflow-hidden rounded-2xl backdrop-blur-sm z-10 shadow-lg group transition-transform transform hover:scale-105"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+            >
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-white mb-2 flex items-center gap-2">
+                  {project.title}
+                  {project.link && (
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-400 hover:text-emerald-400 transition"
+                    >
+                      <ExternalLink className="w-5 h-5" />
+                    </a>
+                  )}
+                </h3>
+
+                <p className="text-gray-300 text-sm mb-4">{project.desc}</p>
+
+                <motion.div
+                  className="flex flex-wrap gap-2"
+                  initial="hidden"
+                  animate="visible"
+                  variants={{
+                    hidden: { opacity: 0 },
+                    visible: {
+                      opacity: 1,
+                      transition: { staggerChildren: 0.1 },
+                    },
+                  }}
+                >
+                  {project.techStack.map((tech, i) => (
+                    <motion.span
+                      key={i}
+                      className="text-xs bg-blue-400/20 text-blue-300 px-2 py-1 rounded-full cursor-pointer"
+                      variants={{
+                        hidden: { opacity: 0, scale: 0.5 },
+                        visible: { opacity: 1, scale: 1 },
+                      }}
+                      transition={{ duration: 0.3 }}
+                      whileHover={{
+                        scale: 1.2,
+                        backgroundColor: "rgba(96, 165, 250, 0.5)", // Light Blue Hover
+                        color: "#ffffff",
+                      }}
+                    >
+                      {tech}
+                    </motion.span>
+                  ))}
+                </motion.div>
+
+                <motion.div
+                  className="flex flex-wrap gap-2 mt-2"
+                  initial="hidden"
+                  animate="visible"
+                  variants={{
+                    hidden: { opacity: 0 },
+                    visible: {
+                      opacity: 1,
+                      transition: { staggerChildren: 0.1 },
+                    },
+                  }}
+                >
+                  {project.libraries && project.libraries.map((tech, i) => (
+                    <motion.span
+                      key={i}
+                      className="text-xs bg-blue-400/20 text-blue-300 px-2 py-1 rounded-full cursor-pointer"
+                      variants={{
+                        hidden: { opacity: 0, scale: 0.5 },
+                        visible: { opacity: 1, scale: 1 },
+                      }}
+                      transition={{ duration: 0.3 }}
+                      whileHover={{
+                        scale: 1.2,
+                        backgroundColor: "rgba(96, 165, 250, 0.5)", // Light Blue Hover
+                        color: "#ffffff",
+                      }}
+                    >
+                      {tech}
+                    </motion.span>
+                  ))}
+                </motion.div>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
+      </SectionWrapper>
+
+      {/* Projects Section */}
+      {/* <SectionWrapper>
         <Heading title="Personal Projects" />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {projects.map((project, index) => (
@@ -159,23 +272,7 @@ export function Home() {
             </div>
           ))}
         </div>
-      </SectionWrapper>
-
-      {/* Organization Projects  */}
-      <Projects />
-
-      {/* Whatsapp Floating Icon  */}
-      <motion.a
-        href="https://wa.me/8437333427?text=Hello%20there!%20I%20am%20interested%20in%20your%20services."
-        target="_blank"
-        rel="noopener noreferrer"
-        className="fixed bottom-8 right-8 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg flex items-center justify-center z-50"
-        initial={{ opacity: 0, x: 50 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.9, ease: "easeOut" }}
-      >
-        <FaWhatsapp className="w-full h-full" />
-      </motion.a>
+      </SectionWrapper> */}
     </main>
   );
 }
