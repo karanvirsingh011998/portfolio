@@ -22,6 +22,19 @@ export const projects = [
     ],
   },
   {
+    title: "Orbital - Next-gen products in an immersive digital experience",
+    desc: "Explore cutting-edge AI assistants, robotics, drones and wearable technology through interactive 3D showcases and futuristic interfaces.",
+    link: "https://orbital-lovable.vercel.app/",
+    techStack: [
+      "React.js",
+      "Shadcn",
+      "Tailwind CSS",
+      "Framer Motion",
+      "Lovable",
+      "vercel",
+    ],
+  },
+  {
     title: "Realtime Tracking",
     desc: "This project demonstrates a real-time location tracking application built with Node.js, Express, Socket.io and Leaflet.js. Live location of user is displayed on an interactive map in real-time",
     link: "https://github.com/karanvirsingh011998/realtime-tracking",
