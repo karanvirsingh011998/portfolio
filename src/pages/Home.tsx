@@ -15,7 +15,6 @@ import resumePDF from "../assets/images/Reactjs-KaranvirSingh.pdf";
 import HomeEffect from "../components/ParticalsEffect";
 import { motion } from "framer-motion";
 import { calculateExperience } from "../utils/calculateExperience";
-import WhatsappConnect from "../components/WhatsappConnect";
 
 export function Home() {
   const [titleIndex, setTitleIndex] = useState(0);

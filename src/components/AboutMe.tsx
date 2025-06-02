@@ -2,7 +2,10 @@ import { motion } from 'framer-motion';
 import Heading from "./Heading";
 import { calculateExperience } from '../utils/calculateExperience';
 import { FaReact, FaNodeJs } from "react-icons/fa";
-import { TbBrandReactNative } from "react-icons/tb";
+import { TbBrandGoogle, TbBrandReactNative } from "react-icons/tb";
+import { FaRobot } from "react-icons/fa";
+import { SiOpenai } from "react-icons/si";
+import { BsStars } from "react-icons/bs";
 import { SiNextdotjs, SiVite, SiAntdesign, SiTypescript, SiMui, SiTailwindcss, SiExpress, SiMongodb, SiFramer, SiShadcnui, SiDaisyui, SiRedux, SiReactquery, SiVercel, SiRailway, SiRender, SiGithub, SiHostinger, SiReacthookform, SiEslint, SiPrettier, SiJsonwebtokens, SiStyledcomponents, SiZod, SiStrapi, SiExpo, SiNativescript } from "react-icons/si";
 
 const fadeInUp = {
@@ -32,6 +35,14 @@ export function AboutMe() {
     { icon: SiVite, color: "text-purple-500", label: "Vite" },
     { icon: TbBrandReactNative, color: "text-blue-500", label: "React Native" },
     { icon: SiExpo, color: "text-purple-700", label: "Expo Router" },
+    { icon: SiOpenai, color: "text-green-500", label: "ChatGPT" },
+    { icon: FaRobot, color: "text-purple-600", label: "Deepseek" },
+    { icon: BsStars, color: "text-pink-500", label: "Cursor" },
+    { icon: FaRobot, color: "text-red-400", label: "Lovable" },
+    { icon: FaRobot, color: "text-blue-400", label: "Bolt.new" },
+    { icon: FaRobot, color: "text-green-400", label: "Trae" },
+    { icon: FaRobot, color: "text-yellow-400", label: "Codeium" },
+    { icon: TbBrandGoogle, color: "text-orange-500", label: "Firebase Studio" },
     { icon: SiNativescript, color: "text-red-600", label: "NativeScript" },
     { icon: SiTailwindcss, color: "text-blue-400", label: "Tailwind CSS" },
     { icon: SiStyledcomponents, color: "text-pink-400", label: "Styled Components" },

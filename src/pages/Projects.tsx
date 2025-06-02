@@ -8,7 +8,7 @@ const tabs = [
   { id: "personal", label: "Personal Projects", projects: projects },
 ];
 
-const techStacks = ["React.js", "Next.js", "Node.js", "MongoDB", "Express.js"];
+const techStacks = ["React.js", "Next.js", "Node.js", "MongoDB", "Express.js", "Bolt.new", "Lovable"];
 
 const Projects = () => {
   const [activeTab, setActiveTab] = useState(tabs[0].id);

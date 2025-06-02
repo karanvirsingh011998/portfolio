@@ -3,10 +3,12 @@ import pizzaMenu from "../../assets/images/pizzaMenu.jpg";
 import farAway from "../../assets/images/TravelList.png";
 import formValidation from "../../assets/images/formValidation.png";
 import convokLandingPage from "../../assets/images/convokLandingPage.png";
+import oribtal from "../../assets/images/orbital.png";
+import fitfocus from "../../assets/images/fitfocus.png";
+import Aurelius from "../../assets/images/Aurelius.png";
 
 
 export const projects = [
-
   {
     title: "ConvoK - Real-Time Communication Redefined",
     desc: "Experience the future of communication with ConvoK! This innovative web app offers secure, real-time chat with dark and light mode support.",
@@ -25,6 +27,7 @@ export const projects = [
     title: "Orbital - Next-gen products in an immersive digital experience",
     desc: "Explore cutting-edge AI assistants, robotics, drones and wearable technology through interactive 3D showcases and futuristic interfaces.",
     link: "https://orbital-lovable.vercel.app/",
+    image: oribtal,
     techStack: [
       "React.js",
       "Shadcn",
@@ -32,6 +35,35 @@ export const projects = [
       "Framer Motion",
       "Lovable",
       "vercel",
+    ],
+  },
+  {
+    title: "FitFocus - Your Personal Fitness Companion",
+    desc: "Transform Your Body,Empower Your Mind. Join FitFocus — Where Strength Meets Community",
+    link: "https://deluxe-pavlova-4700b4.netlify.app/",
+    image: fitfocus,
+    techStack: [
+      "React.js",
+      "Shadcn",
+      "Tailwind CSS",
+      "Framer Motion",
+      "Bolt.new",
+      "Netlify"
+    ],
+  },
+  {
+    title: "Aurelius - Luxury Redefined for Every Woman  (In-progress)",
+    desc: "Discover our exquisite collection of artificial jewellery that combines timeless elegance with modern sophistication. Luxury shouldn't be limited.",
+    link: "https://shimmer-style-website.vercel.app/",
+    image: Aurelius,
+    techStack: [
+      "React.js",
+      "Shadcn",
+      "Vite",
+      "Tailwind CSS",
+      "Framer Motion",
+      "Lovable",
+      "Vercel",
     ],
   },
   {
@@ -113,13 +145,7 @@ export const organizationProjects = [
     desc: "Internal Communication, Events & Document Management Dashboard - Developed a role-based internal dashboard using Next.js and NextAuth for secure authentication and admin-invited user access. The platform includes a post management system where authenticated users can create, edit, and share updates. Built a rich event management system with support for title, description, location, images, and scheduling, validated via Formik and Yup, and visualized using React Big Calendar with RSVP options (“Interested” / “Going”). Introduced a document library module that allows users to create folders and upload files within them, enhancing organized internal file sharing. Zustand was used for global state management, and the entire platform was styled with Tailwind CSS for a responsive, modern UI",
     techStack: ["HTML", "CSS", "React.js", "Next.js", "Typescript"],
     libraries: ["Tailwind CSS", "Next-auth", "Formik", "Yup", "Zustand"],
-  },
-  {
-    title: "Encapsulate",
-    desc: "CRM Integration Portal – Built a user-focused portal integrating Capsule CRM for seamless account management and profile synchronization. Implemented user settings functionality, including full disconnect and update options, along with protected routes and robust error handling to ensure a smooth and secure user experience. Focused on maintainable, accessible design using Material UI, with Formik and Yup for form management and validation.",
-    techStack: ["HTML", "CSS", "Next.js", "Typescript"],
-    libraries: ["Material UI", "Formik", "Yup", "React Redux", "React Helmet"]
-  },  
+  }, 
   {
     title: "Wil Website",
     desc: "Wits Innovation Lab is an innovative company focused on driving business growth through the power of cutting-edge technologies. This project involved creating a dynamic and user-friendly company website that highlights the lab's commitment to providing businesses with disruptive technologies to solve complex problems.",

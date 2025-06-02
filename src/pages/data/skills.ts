@@ -11,6 +11,7 @@ import {
   Cloud,
   PenTool,
   Code,
+  BrainCircuit,
 } from "lucide-react";
 
 export const skills = [
@@ -33,6 +34,20 @@ export const skillCategories = [
       { name: "TypeScript", level: 75 },
       { name: "HTML5", level: 95 },
       { name: "CSS3", level: 90 },
+    ],
+  },
+  {
+    title: "AI Tools",
+    icon: BrainCircuit,
+    skills: [
+      { name: "ChatGPT", level: 90 },
+      { name: "Deepseek", level: 80 },
+      { name: "Cursor", level: 85 },
+      { name: "Lovable", level: 75 },
+      { name: "Bolt.new", level: 70 },
+      { name: "Trae", level: 65 },
+      { name: "Codeium", level: 80 },
+      { name: "Firebase Studio", level: 75 },
     ],
   },
   {
@@ -113,6 +128,7 @@ export const skillCategories = [
     skills: [
       { name: "Vercel", level: 60 },
       { name: "Render", level: 85 },
+      { name: "Netlify", level: 85 },
       { name: "GitHub Pages", level: 70 },
       { name: "Railway", level: 85 },
       { name: "Hostinger", level: 65 },
