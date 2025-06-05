@@ -13,6 +13,7 @@ import {
   Code,
   BrainCircuit,
 } from "lucide-react";
+import { BsTools } from "react-icons/bs";
 
 export const skills = [
   { icon: FaReact, title: "React.js", desc: "A powerful JavaScript library for building user interfaces" },
@@ -74,6 +75,7 @@ export const skillCategories = [
     icon: Workflow,
     skills: [
       { name: "Redux", level: 65 },
+      { name: "Zustand", level: 70 },
       { name: "React Context API", level: 75 },
       { name: "React Query (TanStack Query)", level: 80 },
       { name: "Fetch", level: 85 },
@@ -95,6 +97,7 @@ export const skillCategories = [
     icon: Database,
     skills: [
       { name: "Node.js", level: 60 },
+      { name: "Supabase", level: 40 },
       { name: "Express.js", level: 60 },
       { name: "MongoDB", level: 70 },
       { name: "Mongoose", "level": 60 },
@@ -103,7 +106,7 @@ export const skillCategories = [
   },
   {
     title: "Tools & Technologies",
-    icon: Database,
+    icon: BsTools,
     skills: [
       { name: "npm/yarn", level: 95 },
       { name: "Github", level: 75 },
