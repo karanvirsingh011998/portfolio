@@ -4,7 +4,7 @@ import { HashRouter } from 'react-router-dom';
 import App from './App';
 import './index.css';
 
-import AnimatedCursor from "react-animated-cursor"
+// import AnimatedCursor from "react-animated-cursor"
 
 
 createRoot(document.getElementById('root')!).render(
@@ -12,7 +12,7 @@ createRoot(document.getElementById('root')!).render(
     {/* <BrowserRouter basename="/portfolio"> */}
     <HashRouter basename="/">
       <App />
-      <AnimatedCursor
+      {/* <AnimatedCursor
         innerSize={6}
         outerSize={50}
         color="255, 255, 255"
@@ -39,7 +39,7 @@ createRoot(document.getElementById('root')!).render(
 
           },
         ]}
-      />
+      /> */}
 
     </HashRouter>
   </StrictMode>
