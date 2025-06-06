@@ -54,7 +54,7 @@ export const projects = [
   {
     title: "Aurelius - Luxury Redefined for Every Woman  (In-progress)",
     desc: "Discover our exquisite collection of artificial jewellery that combines timeless elegance with modern sophistication. Luxury shouldn't be limited.",
-    link: "https://shimmer-style-website.vercel.app/",
+    link: "https://shimmer-style-website.lovable.app/",
     image: Aurelius,
     techStack: [
       "React.js",
