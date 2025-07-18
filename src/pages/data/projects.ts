@@ -105,7 +105,21 @@ export const organizationProjects = [
     desc: "Pixel Prints Studios is your one-stop destination for all your printing, gifting, and corporate branding needs. We specialize in high-quality custom printing services, offering everything from T-shirt printing to brochures, business cards, banners, and more. In addition to our printing services, we offer a wide range of personalized gifting options, perfect for special occasions or unique corporate gifts. Whether you’re looking for promotional merchandise, custom-designed gifts, or branded items for your business, Pixel Prints Studios delivers high-quality products with a professional touch.",
     link: "https://www.pixelprintstudios.in/",
     techStack: ["Next.js", "Typescript", "Vercel"],
-    libraries: ["Shadcn", "Shadcn", "Tailwind CSS", "Framer Motion"],
+    libraries: ["Shadcn", "Tailwind CSS", "Framer Motion"],
+  },
+  {
+    title: "Postkodes",
+    desc: "Seamless Cargo And Parcel Handling Solution For Everyone",
+    link: "https://postkodes.com/",
+    techStack: ["React.js"],
+    libraries: ["React Barcode", "Formik", "Axios", "React Slick"],
+  },
+  {
+    title: "Community Schools Connection",
+    desc: "Community Schools Connection - Admin Dashboard.",
+    link: "https://communityschools.resourceportal.com/",
+    techStack: ["Next.js", "Typescript"],
+    libraries: ["Material UI", "React Big Calendar", "Yup", "Formik", "React Responsive Carousel", "Redux"],
   },
   {
     title: "Encapsulate",
