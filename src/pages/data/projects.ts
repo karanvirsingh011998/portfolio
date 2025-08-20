@@ -153,6 +153,7 @@ export const organizationProjects = [
     desc: "Fitness Admin Dashboard - Designed and developed an admin-only dashboard for a boutique fitness studio offering personalized exercise bed classes. The dashboard presents real-time business metrics such as Active Customers, Expired Subscriptions, Delinquent Accounts, Total Revenue, and Weekly Bookings. It includes dynamic charts for Monthly Revenue, Weekly Booking Trends, and Delinquency Rate (%), providing actionable insights at a glance. Admins can manage Customers, Classes, Plans, and Payments through clean, responsive tables. This project showcases my ability to build functional, data-centric admin interfaces tailored for operational efficiency.",
     techStack: ["HTML", "CSS", "React.js", "Vite", "Lovable", "Typescript"],
     libraries: ["Tailwind CSS", "Recharts", "Shadcn"],
+    link: "https://balancestudio.com.ar/",
   },
   {
     title: "Mesh-HR",
