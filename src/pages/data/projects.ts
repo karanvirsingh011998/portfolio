@@ -116,10 +116,10 @@ export const organizationProjects = [
   },
   {
     title: "Community Schools Connection",
-    desc: "Community Schools Connection - Admin Dashboard.",
+    desc: "Community Schools Connection - A centralized admin dashboard for schools to manage feeds, groups, and members with role-based access, analytics, and secure controls—enhancing community engagement and collaboration.",
     link: "https://communityschools.resourceportal.com/",
     techStack: ["Next.js", "Typescript"],
-    libraries: ["Material UI", "React Big Calendar", "Yup", "Formik", "React Responsive Carousel", "Redux"],
+    libraries: ["Material UI", "Socket IO" , "React Big Calendar", "Yup", "Formik", "React Responsive Carousel", "Redux"],
   },
   {
     title: "Encapsulate",
