@@ -7,7 +7,6 @@ import oribtal from "../../assets/images/orbital.png";
 import fitfocus from "../../assets/images/fitfocus.png";
 import Aurelius from "../../assets/images/Aurelius.png";
 
-
 export const projects = [
   {
     title: "ConvoK - Real-Time Communication Redefined",
@@ -48,7 +47,7 @@ export const projects = [
       "Tailwind CSS",
       "Framer Motion",
       "Bolt.new",
-      "Netlify"
+      "Netlify",
     ],
   },
   {
@@ -72,7 +71,7 @@ export const projects = [
     link: "https://github.com/karanvirsingh011998/realtime-tracking",
     image: realtimetrackingScrenshot,
     techStack: ["Express.js", "Socket.io", "Node.js", "Leaflet"],
-    libraries: []
+    libraries: [],
   },
   {
     title: "Form Validations",
@@ -80,7 +79,7 @@ export const projects = [
     link: "https://karanvirsingh011998.github.io/FormsAndValidations/",
     image: formValidation,
     techStack: ["React.js", "React Hook Form", "Formik", "Yup", "Zod"],
-    libraries: []
+    libraries: [],
   },
   {
     title: "Far Away - Travel List",
@@ -95,7 +94,7 @@ export const projects = [
     link: "https://github.com/karanvirsingh011998/pizzaMenu",
     image: pizzaMenu,
     techStack: ["HTML", "CSS", "React.js"],
-    libraries: []
+    libraries: [],
   },
 ];
 
@@ -119,15 +118,24 @@ export const organizationProjects = [
     desc: "Community Schools Connection - A centralized admin dashboard for schools to manage feeds, groups, and members with role-based access, analytics, and secure controls—enhancing community engagement and collaboration.",
     link: "https://communityschools.resourceportal.com/",
     techStack: ["Next.js", "Typescript"],
-    libraries: ["Material UI", "Socket IO" , "React Big Calendar", "Yup", "Formik", "React Responsive Carousel", "Redux"],
+    libraries: [
+      "Material UI",
+      "Socket IO",
+      "React Big Calendar",
+      "Yup",
+      "Formik",
+      "React Responsive Carousel",
+      "Redux",
+    ],
   },
   {
     title: "Encapsulate",
     desc: "A CRM integration project that connects user accounts with Capsulate CRM. The application allows users to manage their profiles, edit details, and configure settings, including the ability to disconnect their Capsulate account seamlessly. The project ensures smooth data synchronization and a user-friendly experience for managing CRM connections.",
     techStack: ["HTML", "CSS", "Next.js", "Typescript"],
     libraries: ["Material UI", "Fromik", "Yup", "React Redux", "React Helmet"],
-    link: "https://capsulecrm.lusites.xyz/"
-  }, {
+    link: "https://capsulecrm.lusites.xyz/",
+  },
+  {
     title: "Flahybase",
     desc: "A biotechnology company website showcasing an AI-driven ecosystem for Precision Oncology. Flahybase develops cutting-edge detection and diagnostic products powered by artificial intelligence and collaborates with leading institutions to advance targeted therapies. The website features a landing page with sections for About, Diagnostics ,Team,and Contact Us.",
     techStack: ["HTML", "CSS", "Next.js"],
@@ -139,14 +147,30 @@ export const organizationProjects = [
       "p5-wrapper/react",
       "react-particles",
     ],
-    link: "https://flahybase.com",
+    link: "https://flahyhealth.com",
   },
   {
     title: "FlahyRecovery",
     desc: "FlahyRecovery is a biotechnology company website designed to streamline workflows with dedicated portals for users, admins, and commercial partners. The website features a landing page and User Portal: Allows users to upload and download their reports. Admin Portal: Enables admins to manage user data by uploading and downloading reports, as well as creating new reports and user accounts. Commercial Partner Portal: Allows partners to add new users and upload reports for them if already created.",
     techStack: ["HTML", "CSS", "Next.js", , "Typescript"],
     libraries: ["Tailwind CSS", "crypto.js", "Formik", "Yup", "next-intl"],
-    link: "https://flahyrecovery.com",
+    link: "https://flahyhealth.com/flahyrecovery",
+  },
+  
+  {
+    title: "JC Automax - Admin Portal",
+    desc: "Built an admin portal to streamline partner and vehicle management with full CRUD functionality. Implemented secure role-based permissions for managing users, vehicles, and inventory. Designed an interactive dashboard with real-time insights on sales, inventory status, and business metrics.",
+    techStack: ["React.js", "Lovable", "Replit", "Tailwind CSS"],
+    libraries: ["Tailwind CSS", "Shadcn"],
+    link: "https://admin.jcautomax.com/",
+  },
+
+  {
+    title: "JC Automax - Main Website",
+    desc: "Developed the main website showcasing JC Automax’s car inventory with high-quality images and videos uploaded directly by the admin. Delivered a modern, responsive UI using Lovable React for rapid development and Tailwind CSS for consistent design.",
+    techStack: ["React.js", "Lovable", "Replit", "Tailwind CSS"],
+    libraries: ["Tailwind CSS", "Shadcn"],
+    link: "https://jcautomax.com/",
   },
   {
     title: "Balance Pilates Studio",
@@ -160,7 +184,7 @@ export const organizationProjects = [
     desc: "Internal Communication, Events & Document Management Dashboard - Developed a role-based internal dashboard using Next.js and NextAuth for secure authentication and admin-invited user access. The platform includes a post management system where authenticated users can create, edit, and share updates. Built a rich event management system with support for title, description, location, images, and scheduling, validated via Formik and Yup, and visualized using React Big Calendar with RSVP options (“Interested” / “Going”). Introduced a document library module that allows users to create folders and upload files within them, enhancing organized internal file sharing. Zustand was used for global state management, and the entire platform was styled with Tailwind CSS for a responsive, modern UI",
     techStack: ["HTML", "CSS", "React.js", "Next.js", "Typescript"],
     libraries: ["Tailwind CSS", "Next-auth", "Formik", "Yup", "Zustand"],
-  }, 
+  },
   {
     title: "Wil Website",
     desc: "Wits Innovation Lab is an innovative company focused on driving business growth through the power of cutting-edge technologies. This project involved creating a dynamic and user-friendly company website that highlights the lab's commitment to providing businesses with disruptive technologies to solve complex problems.",
@@ -185,8 +209,7 @@ export const organizationProjects = [
     desc: "Streamlining software projects with customizable workflows, task assignments, and progress tracking. Developed and enhanced frontend features using React.js, integrated Ant Design (antd) components, and utilized Chart.js for data visualization. Used React and Redux for state management in the application along with the use of React Hooks. Build robust backend services and APIs with Node.js and Express.js. Design and implement MongoDB schemas using Mongoose for efficient data storage and retrieval.",
     techStack: ["HTML", "CSS", "Next.js", "Node.js", "Express.js", "MongoDB"],
     libraries: ["Redux", "Antd", "Chart.js", "Typescript"],
-    link: "https://planit.thewitslab.com"
-
+    link: "https://planit.thewitslab.com",
   },
   {
     title: "Wil Portfolio",

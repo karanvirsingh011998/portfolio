@@ -45,6 +45,7 @@ export const skillCategories = [
       { name: "Deepseek", level: 80 },
       { name: "Cursor", level: 85 },
       { name: "Lovable", level: 75 },
+      { name: "Replit", level: 65 },
       { name: "Bolt.new", level: 70 },
       { name: "Trae", level: 65 },
       { name: "Codeium", level: 80 },
