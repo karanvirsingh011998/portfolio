@@ -129,14 +129,7 @@ export const organizationProjects = [
     ],
   },
   {
-    title: "Encapsulate",
-    desc: "A CRM integration project that connects user accounts with Capsulate CRM. The application allows users to manage their profiles, edit details, and configure settings, including the ability to disconnect their Capsulate account seamlessly. The project ensures smooth data synchronization and a user-friendly experience for managing CRM connections.",
-    techStack: ["HTML", "CSS", "Next.js", "Typescript"],
-    libraries: ["Material UI", "Fromik", "Yup", "React Redux", "React Helmet"],
-    link: "https://capsulecrm.lusites.xyz/",
-  },
-  {
-    title: "Flahybase",
+    title: "FlahyHealth",
     desc: "A biotechnology company website showcasing an AI-driven ecosystem for Precision Oncology. Flahybase develops cutting-edge detection and diagnostic products powered by artificial intelligence and collaborates with leading institutions to advance targeted therapies. The website features a landing page with sections for About, Diagnostics ,Team,and Contact Us.",
     techStack: ["HTML", "CSS", "Next.js"],
     libraries: [
@@ -146,8 +139,17 @@ export const organizationProjects = [
       "Yup",
       "p5-wrapper/react",
       "react-particles",
+      "Assistant UI",
+      "razorpay",
     ],
     link: "https://flahyhealth.com",
+  },
+  {
+    title: "Encapsulate",
+    desc: "A CRM integration project that connects user accounts with Capsulate CRM. The application allows users to manage their profiles, edit details, and configure settings, including the ability to disconnect their Capsulate account seamlessly. The project ensures smooth data synchronization and a user-friendly experience for managing CRM connections.",
+    techStack: ["HTML", "CSS", "Next.js", "Typescript"],
+    libraries: ["Material UI", "Fromik", "Yup", "React Redux", "React Helmet"],
+    link: "https://capsulecrm.lusites.xyz/",
   },
   {
     title: "FlahyRecovery",
@@ -156,7 +158,6 @@ export const organizationProjects = [
     libraries: ["Tailwind CSS", "crypto.js", "Formik", "Yup", "next-intl"],
     link: "https://flahyhealth.com/flahyrecovery",
   },
-  
   {
     title: "JC Automax - Admin Portal",
     desc: "Built an admin portal to streamline partner and vehicle management with full CRUD functionality. Implemented secure role-based permissions for managing users, vehicles, and inventory. Designed an interactive dashboard with real-time insights on sales, inventory status, and business metrics.",

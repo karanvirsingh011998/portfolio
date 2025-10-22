@@ -10,16 +10,6 @@ export function Contact() {
     { title: "Custom Web Solutions", icon: <Settings className="w-10 h-10 text-blue-400" /> },
   ];
 
-  const faqs = [
-    { question: "What technologies do you specialize in?", answer: "I specialize in React.js, Next.js, React Native, Tailwind CSS, and the MERN stack." },
-    { question: "Do you offer website maintenance?", answer: "Yes, I provide ongoing support and maintenance for websites and applications." },
-    { question: "How long does a project take?", answer: "Timelines vary based on complexity. A basic site may take 2-4 weeks, while larger projects take longer." },
-    { question: "Do you work with startups and small businesses?", answer: "Absolutely! I enjoy helping startups and small businesses establish their online presence." },
-    { question: "Can you redesign an existing website?", answer: "Yes, I can revamp your existing site to improve performance, aesthetics, and user experience." },
-    { question: "Do you provide hosting services?", answer: "Yes, we provide hosting services along with development. We can help you set up and manage hosting on platforms like Vercel, Hostinger, Railway, Render, and others, ensuring a seamless deployment for your website or application." },
-    { question: "What is your pricing model?", answer: "Pricing depends on project complexity and scope. Contact me for a customized quote." }
-  ];
-
   const details = [
     { title: "Email", text: "karanvir01998@gmail.com", link: "mailto:karanvir011998@gmail.com", icon: <Mail className="w-6 h-6 text-blue-400" /> },
     { title: "Phone", text: "+91 8437333427", link: "tel:+918437333427", icon: <Phone className="w-6 h-6 text-blue-400" /> },

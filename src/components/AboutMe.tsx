@@ -4,9 +4,10 @@ import { calculateExperience } from '../utils/calculateExperience';
 import { FaReact, FaNodeJs } from "react-icons/fa";
 import { TbBrandGoogle, TbBrandReactNative } from "react-icons/tb";
 import { FaRobot } from "react-icons/fa";
-import { SiOpenai } from "react-icons/si";
+import { SiOpenai, SiRazorpay } from "react-icons/si";
 import { BsStars } from "react-icons/bs";
 import { SiNextdotjs, SiVite, SiAntdesign, SiTypescript, SiMui, SiTailwindcss, SiExpress, SiMongodb, SiFramer, SiShadcnui, SiDaisyui, SiRedux, SiReactquery, SiVercel, SiRailway, SiRender, SiGithub, SiHostinger, SiReacthookform, SiEslint, SiPrettier, SiJsonwebtokens, SiStyledcomponents, SiZod, SiStrapi, SiExpo, SiNativescript } from "react-icons/si";
+import { FcAssistant } from 'react-icons/fc';
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
@@ -52,6 +53,8 @@ export function AboutMe() {
     { icon: SiAntdesign, color: "text-blue-600", label: "Ant Design" },
     { icon: SiMui, color: "text-blue-500", label: "MUI" },
     { icon: SiReacthookform, color: "text-orange-500", label: "React Hook Form" },
+    { icon: SiRazorpay, color: "text-blue-400", label: "Razorpay" },
+    { icon: FcAssistant, color: "text-green-500", label: "Assistant UI" },
     { icon: SiZod, color: "text-blue-600", label: "Zod" },
     { icon: SiJsonwebtokens, color: "text-blue-500", label: "JWT" },
     { icon: FaNodeJs, color: "text-green-500", label: "Node.js" },
@@ -146,7 +149,7 @@ export function AboutMe() {
           <h3 className="text-2xl font-semibold text-gray-200 mb-6">Achievements</h3>
           <ul className="list-disc list-inside text-gray-300 text-lg">
             <li>🏆 Built & deployed <b><a href="https://pixelprintstudios.in/" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">Pixel Print Studios</a></b></li>
-            <li>🚀 {calculateExperience(2022, 5)} experience in <b>React, Next.js, React Native & Node.js</b></li>
+            <li>🚀 {calculateExperience(2022, 5)} experience in <b>React, Next.js, Node.js, MongoDB, React Native & Node.js</b></li>
           </ul>
         </motion.div>
 
