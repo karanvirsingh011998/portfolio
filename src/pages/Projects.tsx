@@ -73,7 +73,7 @@ const Projects = () => {
 
           {/* Project Cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {filteredProjects.slice(0, visibleProjects).map((project: any, index) => (
+            {filteredProjects.map((project: any, index) => (
               <motion.div
                 key={index}
                 className="p-4 bg-gray-800 text-white rounded-xl shadow-lg"
@@ -104,14 +104,14 @@ const Projects = () => {
           </div>
 
           {/* Load More Button */}
-          {visibleProjects < filteredProjects.length && (
+          {/* {visibleProjects < filteredProjects.length && (
             <button
               className="mt-6 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
               onClick={() => setVisibleProjects((prev) => prev + 10)}
             >
               Load More
             </button>
-          )}
+          )} */}
 
           {/* Call-to-Action Section */}
           <div className="mt-12 text-center">

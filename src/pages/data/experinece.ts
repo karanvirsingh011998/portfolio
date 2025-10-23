@@ -1,8 +1,10 @@
+import { calculateExperience } from "../../utils/calculateExperience";
+
 export const experiences = [
   {
     jobTitle: "Software Engineer",
     companyName: "Lumino Guru",
-    duration: "Nov 2024 - Present",
+    duration: `Nov 2024 - Present (${calculateExperience(2024, 11)})`,
     companyUrl: "https://luminoguru.com",
     responsibilities: [
       "Developed and maintained web applications using React.js and Next.js",

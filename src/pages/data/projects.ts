@@ -108,7 +108,7 @@ export const organizationProjects = [
   },
   {
     title: "Postkodes",
-    desc: "Seamless Cargo And Parcel Handling Solution For Everyone",
+    desc: "Seamless Cargo And Parcel Handling Solution For Everyone.Perfect for consumers, e-commerce businesses, and small to medium sized couriers. Postkodes is a platform designed to make parcel handling seamless. Embedded with IoT technology, Postkodes enables users to create shipment, print shipping documents & labels, scan parcels, track parcels & set-up sms & email tracking alerts for any parcel. Along with other great features, users can also exchange shipping documents, request a click & collect or courier collect by proxy (COPY) service. Our universal parcel tracking solution indexes more than 1000 carriers worldwide including all major couriers and airlines.",
     link: "https://postkodes.com/",
     techStack: ["React.js"],
     libraries: ["React Barcode", "Formik", "Axios", "React Slick"],

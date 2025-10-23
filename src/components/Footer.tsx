@@ -59,7 +59,7 @@ export function Footer() {
 
           {/* Copyright */}
           <p className="text-gray-400 text-sm">
-            © {new Date().getFullYear()} Karanvir Singh. All rights reserved.
+            © {new Date().getFullYear()} Karanvir Singh | Built with ❤️.
           </p>
         </div>
       </div>

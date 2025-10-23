@@ -1,5 +1,5 @@
 export const calculateExperience = (startYear: number, startMonth: number): string => {
-  const startDate = new Date(startYear, startMonth - 1); // Months are 0-based in JS
+  const startDate = new Date(startYear, startMonth - 1); // Months are 0-based
   const currentDate = new Date();
 
   let years = currentDate.getFullYear() - startDate.getFullYear();
@@ -10,5 +10,15 @@ export const calculateExperience = (startYear: number, startMonth: number): stri
     months += 12;
   }
 
-  return months === 0 ? `${years} years` : `${years}.${months} years`;
+  // Handle pluralization and formatting
+  if (years <= 0 && months > 0) {
+    return `${months} month${months > 1 ? "s" : ""}`;
+  } else if (years > 0 && months === 0) {
+    return `${years} year${years > 1 ? "s" : ""}`;
+  } else if (years > 0 && months > 0) {
+    return `${years} year${years > 1 ? "s" : ""} ${months} month${months > 1 ? "s" : ""}`;
+  } else {
+    return "Less than a month";
+  }
 };
+
