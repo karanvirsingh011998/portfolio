@@ -156,7 +156,7 @@ export const organizationProjects = [
     desc: "FlahyRecovery is a biotechnology company website designed to streamline workflows with dedicated portals for users, admins, and commercial partners. The website features a landing page and User Portal: Allows users to upload and download their reports. Admin Portal: Enables admins to manage user data by uploading and downloading reports, as well as creating new reports and user accounts. Commercial Partner Portal: Allows partners to add new users and upload reports for them if already created.",
     techStack: ["HTML", "CSS", "Next.js", , "Typescript"],
     libraries: ["Tailwind CSS", "crypto.js", "Formik", "Yup", "next-intl"],
-    link: "https://flahyhealth.com/flahyrecovery",
+    link: "https://flahyhealth.com/oncology",
   },
   {
     title: "JC Automax - Admin Portal",
