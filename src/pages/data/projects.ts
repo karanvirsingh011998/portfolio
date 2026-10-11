@@ -23,6 +23,21 @@ export const projects = [
     ],
   },
   {
+    title: "3D Interactive Portfolio",
+    desc: "An immersive 3D portfolio experience featuring interactive visuals, smooth animations, and a modern design to showcase my skills, projects, and development journey.",
+    link: "https://karanvirsingh.vercel.app/",
+    image: threejsPortfolio,
+    techStack: [
+      "Three.js",
+      "JavaScript",
+      "React.js",
+      "3D Graphics",
+      "WebGL",
+      "Framer Motion"
+    ],
+  },
+
+  {
     title: "Orbital - Next-gen products in an immersive digital experience",
     desc: "Explore cutting-edge AI assistants, robotics, drones and wearable technology through interactive 3D showcases and futuristic interfaces.",
     link: "https://orbital-lovable.vercel.app/",
